@@ -728,7 +728,7 @@
       star.style.display = "flex";
       document.getElementById("result-view").style.display = "block";
       document.getElementById("results").style.display = "flex";
-      document.getElementById("results").scrollIntoView({ behavior: 'smooth' });
+      document.getElementById("results").scrollIntoView({ behavior: "smooth" });
       document.getElementById("standar-bobot3").innerHTML = bobot3;
       document.getElementById("result-bobot1").innerText = bobot1;
       document.getElementById("result-bobot2").innerText = bobot2;
@@ -752,22 +752,46 @@
           .classList.add("icon-gradient-3");
         document.getElementById("menantang-icon").classList.add("fa-sad-tear");
       } else {
-        document.getElementById("menantang").innerText = "Masiiiih";
-        document.getElementById("menantang").style.color = "#000";
-        document.getElementById("menantang-box").style.backgroundColor =
-          "#B7E5B4";
-        document
-          .getElementById("menantang-gradient")
-          .classList.remove("icon-gradient-3");
-        document
-          .getElementById("menantang-icon")
-          .classList.remove("fa-sad-tear");
-        document
-          .getElementById("menantang-gradient")
-          .classList.add("icon-gradient-5");
-        document
-          .getElementById("menantang-icon")
-          .classList.add("fa-laugh-squint");
+        console.log('realisasi2',realisasi2)
+        console.log('realisasi1',realisasi1)
+        console.log('target2',target2)
+        console.log('target1',target1)
+        if (realisasi2 == target2 && realisasi1 == target1) {
+          document.getElementById("menantang").innerText =
+            "Apa ini sudah maksimal banget capaiannya? Mending reformulasi aja!";
+          document.getElementById("menantang").style.color = "#fff";
+          document.getElementById("menantang-box").style.backgroundColor =
+            "#F28585";
+          document
+            .getElementById("menantang-gradient")
+            .classList.remove("icon-gradient-5");
+          document
+            .getElementById("menantang-icon")
+            .classList.remove("fa-laugh-squint");
+          document
+            .getElementById("menantang-gradient")
+            .classList.add("icon-gradient-3");
+          document
+            .getElementById("menantang-icon")
+            .classList.add("fa-sad-tear");
+        } else {
+          document.getElementById("menantang").innerText = "Masiiiih";
+          document.getElementById("menantang").style.color = "#000";
+          document.getElementById("menantang-box").style.backgroundColor =
+            "#B7E5B4";
+          document
+            .getElementById("menantang-gradient")
+            .classList.remove("icon-gradient-3");
+          document
+            .getElementById("menantang-icon")
+            .classList.remove("fa-sad-tear");
+          document
+            .getElementById("menantang-gradient")
+            .classList.add("icon-gradient-5");
+          document
+            .getElementById("menantang-icon")
+            .classList.add("fa-laugh-squint");
+        }
       }
     });
   }
