@@ -728,7 +728,7 @@
       star.style.display = "flex";
       document.getElementById("result-view").style.display = "block";
       document.getElementById("results").style.display = "flex";
-      document.getElementById("results").scrollIntoView({ behavior: "smooth" });
+      document.getElementById("result-view").scrollIntoView({ behavior: "smooth" });
       document.getElementById("standar-bobot3").innerHTML = bobot3;
       document.getElementById("result-bobot1").innerText = bobot1;
       document.getElementById("result-bobot2").innerText = bobot2;
