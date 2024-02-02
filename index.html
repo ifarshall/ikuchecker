@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyeksi Kualitas Target IKU</title>
+
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="img/png" />
+    <!--====== Bootstrap css ======-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!--====== Slick Slider ======-->
+    <link rel="stylesheet" href="assets/css/slick.min.css" />
+    <!--====== Magnific ======-->
+    <link rel="stylesheet" href="assets/css/magnific-popup.min.css" />
+    <!--====== Nice Select ======-->
+    <link rel="stylesheet" href="assets/css/nice-select.min.css" />
+    <!--====== Animate CSS ======-->
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+    <!--====== Jquery UI CSS ======-->
+    <link rel="stylesheet" href="assets/css/jquery-ui.min.css" />
+    <!--====== Font Awesome ======-->
+    <link rel="stylesheet" href="assets/fonts/fontawesome/css/all.min.css" />
+    <!--====== Flaticon ======-->
+    <link rel="stylesheet" href="assets/fonts/flaticon/flaticon.css" />
+    <!--====== Spacing Css ======-->
+    <link rel="stylesheet" href="assets/css/spacing.min.css" />
+    <!--====== Main Css ======-->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!--====== Responsive CSS ======-->
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+
+<body>
+    <!--======= Start Preloader =======-->
+    <div id="preloader">
+        <img class="preloader-image" width="60" src="assets/img/preloader-logo.png" alt="preloader" />
+    </div>
+    <!--======= End Preloader =======-->
+
+
+    <!--====== Start Hero Area ======-->
+    <section class="product-details p-t-50 p-b-50">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-8">
+                    <div class="product-details-content wow fadeInRight delay-0-2s">
+                        <div class="common-heading m-b-5">
+                            <h2 class="title text-center">Cek Proyeksi Kualitas Target IKU</h2>
+                        </div>
+                        <div id="standar-target" class="ratting-price m-b-25 justify-content-center"
+                            style="display: none;">
+                            <div class="row price">
+                                <div class="p-r-10">
+                                    Target Standar :
+                                </div>
+                                <div id="standar-bobot3"></div>
+                                <div class="ratting p-l-20">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="m-b-30">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <p style="font-style: italic;">"Perhitungan berdasarkan KMK-300/KMK.01/2022 untuk IKU
+                                    Maximize dan IKU Lama"</p>
+                            </div>
+                            <div class="col-lg-6">
+                                <form action="#" class="add-to-cart">
+                                    <div
+                                        style="display:flex;justify-content: space-between;width: 100%;align-items: center;">
+                                        <label>Target 2022</label>
+                                        <input type="number" value="1" step="0.01" id="target-2">
+                                    </div>
+                                    <div
+                                        style="display:flex;justify-content: space-between;width: 100%;align-items: center;">
+                                        <label>Realisasi 2022</label>
+                                        <input type="number" value="1" step="0.01" id="realisasi-2">
+                                    </div>
+                                    <div
+                                        style="display:flex;justify-content: space-between;width: 100%;align-items: center;">
+                                        <label>Target 2023</label>
+                                        <input type="number" value="1" step="0.01" id="target-1">
+                                    </div>
+                                    <div
+                                        style="display:flex;justify-content: space-between;width: 100%;align-items: center;">
+                                        <label>Realisasi 2023</label>
+                                        <input type="number" value="1" step="0.01" id="realisasi-1">
+                                    </div>
+                                    <div class="row justify-content-center" style="width:100%;">
+                                        <button type="submit" id="check-target" class="template-btn primary-bg">Cek
+                                            Kualitas
+                                            Target Per Bobot</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <ul class="nav product-information-tab p-t-55 m-b-30 justify-content-center">
+                <li><a href="#details" data-toggle="tab" class="active show">Informasi</a></li>
+                <li><a href="#information" data-toggle="tab">Pilihan Terbaik</a></li>
+            </ul>
+            <div id="result-view" style="display: none;" class="tab-content wow fadeInUp delay-0-2s">
+                <div class="tab-pane fade active show" id="details">
+                    <div class="row justify-content-center iconic-boxes-v1">
+                        <div class="col-xl-6 col-md-6 col-sm-10">
+                            <div id="menantang-box" class="iconic-box m-t-30" style="display: flex;align-items: center;flex-direction: column;background-color: #B7E5B4;">
+                                <div id="menantang-gradient" class="icon">
+                                    <i id="menantang-icon" class="far"></i>
+                                </div>
+                                <h5 class="title">Masih Menantang?</h5>
+                                <h3 id="menantang" style="color:#fff">
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-md-6 col-sm-10">
+                            <div id="standardtarget-box" class="iconic-box m-t-30" style="display: flex;align-items: center;flex-direction: column;background-color: #A1EEBD;">
+                                <div class="icon icon-gradient-4">
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <h5 class="title">Standar Target (Rekomendasi Kami)</h5>
+                                <h3 id="result-bobot3">
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6 col-sm-10">
+                            <div class="iconic-box m-t-30" style="display: flex;align-items: center;flex-direction: column;background-color: #F28585;">
+                                <div class="icon icon-gradient-3">
+                                    <i class="far fa-chart-line-down"></i>
+                                </div>
+                                <h5 class="title">Bobot Kualitas 1</h5>
+                                <h3 id="result-bobot1">
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6 col-sm-10">
+                            <div class="iconic-box m-t-30" style="display: flex;align-items: center;flex-direction: column;background-color: #FFFC9B;">
+                                <div class="icon icon-gradient-6">
+                                    <i class="far fa-exclamation"></i>
+                                </div>
+                                <h5 class="title">Bobot Kualitas 2</h5>
+                                <h3 id="result-bobot2">
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6 col-sm-10">
+                            <div class="iconic-box m-t-30"  style="display: flex;align-items: center;flex-direction: column;background-color: #A1EEBD;">
+                                <div class="icon icon-gradient-5">
+                                    <i class="far fa-chart-line"></i>
+                                </div>
+                                <h5 class="title">Bobot Kualitas 4</h5>
+                                <h3 id="result-bobot4">
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6 col-sm-10">
+                            <div class="iconic-box m-t-30"  style="display: flex;align-items: center;flex-direction: column;background-color: #37B5B6;">
+                                <div class="icon icon-gradient-5">
+                                    <i class="far fa-fighter-jet"></i>
+                                </div>
+                                <h5 class="title">Bobot Kualitas 5</h5>
+                                <h3 id="result-bobot5">
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="information">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 col-md-6 col-sm-8 wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="pricing-table pricing-secondary-1 m-t-30">
+                                <div class="plan-title-area">
+                                    <h5 class="plan-name"></h5>
+                                    <img src="assets/img/pricing/plan-icon.png" alt="Plan icon" class="plan-icon">
+                                    <svg class="plan-shape">
+                                        <path class="blob"
+                                            d="M675.762,6280.79c27.519-33.95,38.271-67.86,19.8-107.55-44.452-95.53-192.815-73.8-213.55-32.81-19.531,38.6,77.819,48.49,80.344,152.05C563.555,6341.55,636.194,6329.6,675.762,6280.79Z"
+                                            transform="translate(-479.406 -6105.56)" />
+                                    </svg>
+                                </div>
+                                <div class="plan-cost">
+                                    <span class="currency">Target</span>
+                                    <span class="price"></span>
+                                    <span class="plan-type">/ Bobot</span>
+                                    <span class="plan-type">3</span>
+                                </div>
+                                <ul class="plan-feature">
+                                    <!-- <li>Social Media Marketing</li>
+                                    <li>2.100 Keywords</li>
+                                    <li>One Way Link Building</li>
+                                    <li class="disabled-feature">5 Free Optimization</li>
+                                    <li class="disabled-feature">3 Press Releases</li> -->
+                                </ul>
+                                <!-- <a href="#" class="template-btn">Select Plan <i class="fas fa-arrow-right"></i></a> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--====== End Hero Area ======-->
+
+    <!-- ====== Start CTA Section ======-->
+    <!-- <section class="cta-section cta-with-particle border-bottom-primary p-t-130 p-b-130">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="cta-content wow fadeInUp">
+                        <div class="common-heading tagline-boxed m-b-50 text-center">
+                            <span class="tagline">Download Apps</span>
+                            <h2 class="title">Get our apps very easily, we’re available on store</h2>
+                        </div>
+
+                        <ul class="cta-btns justify-content-center">
+                            <li>
+                                <a href="services.html" class="template-btn">
+                                    Apple Store <i class="fab fa-apple"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="services.html" class="template-btn bordered-btn">
+                                    Google Play <i class="fab fa-google-play"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="cta-particle d-none d-md-block">
+                <img class="particle-left" src="assets/img/particle/cta-left-particle-1.png" alt="cta particle 1">
+                <img class="particle-right" src="assets/img/particle/cta-right-particle-1.png" alt="cta particle 2">
+            </div>
+        </div>
+    </section> -->
+    <!--====== End CTA Section ====== -->
+
+    <!--====== Start Scroll To Top ======-->
+    <a href="#" class="back-to-top" id="scroll-top">
+        <i class="far fa-angle-up"></i>
+    </a>
+    <!--====== End Scroll To Top ======-->
+
+    <!--====== Start Footer ======-->
+
+    <!--====== End Footer ======-->
+
+    <!--====== Jquery ======-->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <!--====== Bootstrap ======-->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!--====== Slick slider ======-->
+    <script src="assets/js/slick.min.js"></script>
+    <!--====== Magnific ======-->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <!--====== Isotope Js ======-->
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <!--====== Jquery UI Js ======-->
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <!--====== Inview ======-->
+    <script src="assets/js/jquery.inview.min.js"></script>
+    <!--====== Nice Select ======-->
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <!--====== Wow ======-->
+    <script src="assets/js/wow.min.js"></script>
+    <!--====== Main JS ======-->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
