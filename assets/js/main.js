@@ -752,10 +752,6 @@
           .classList.add("icon-gradient-3");
         document.getElementById("menantang-icon").classList.add("fa-sad-tear");
       } else {
-        console.log('realisasi2',realisasi2)
-        console.log('realisasi1',realisasi1)
-        console.log('target2',target2)
-        console.log('target1',target1)
         if (realisasi2 == target2 && realisasi1 == target1) {
           document.getElementById("menantang").innerText =
             "Apa ini sudah maksimal banget capaiannya? Mending reformulasi aja!";
