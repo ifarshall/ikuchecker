@@ -8,7 +8,7 @@
     <title>Proyeksi Kualitas Target IKU</title>
 
     <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="assets/img/favicon.png" type="img/png" />
+    <link rel="shortcut icon" href="assets/img/logo.png" type="img/png" />
     <!--====== Bootstrap css ======-->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <!--====== Slick Slider ======-->
@@ -36,7 +36,7 @@
 <body>
     <!--======= Start Preloader =======-->
     <div id="preloader">
-        <img class="preloader-image" width="60" src="assets/img/preloader-logo.png" alt="preloader" />
+        <img class="preloader-image" width="60" src="assets/img/logo.png" alt="preloader" />
     </div>
     <!--======= End Preloader =======-->
 
@@ -69,6 +69,7 @@
                             <div class="col-lg-6">
                                 <p style="font-style: italic;">"Perhitungan berdasarkan KMK-300/KMK.01/2022 untuk IKU
                                     Maximize dan IKU Lama"</p>
+                                    <img src="assets/img/logo.png" height="300">
                             </div>
                             <div class="col-lg-6">
                                 <form action="#" class="add-to-cart">
@@ -92,7 +93,7 @@
                                         <label>Realisasi 2023</label>
                                         <input type="number" value="1" step="0.01" id="realisasi-1">
                                     </div>
-                                    <div class="row justify-content-center" style="width:100%;">
+                                    <div class="row justify-content-center m-t-20" style="width:100%;">
                                         <button type="submit" id="check-target" class="template-btn primary-bg">Cek
                                             Kualitas
                                             Target Per Bobot</button>
@@ -104,7 +105,7 @@
                     </div>
                 </div>
             </div>
-            <ul class="nav product-information-tab p-t-55 m-b-30 justify-content-center">
+            <ul id="results" style="display: none;" class="nav product-information-tab p-t-55 m-b-30 justify-content-center">
                 <li><a href="#details" data-toggle="tab" class="active show">Informasi</a></li>
                 <li><a href="#information" data-toggle="tab">Pilihan Terbaik</a></li>
             </ul>

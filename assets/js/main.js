@@ -727,6 +727,7 @@
       const star = document.getElementById("standar-target");
       star.style.display = "flex";
       document.getElementById("result-view").style.display = "block";
+      document.getElementById("results").style.display = "flex";
       document.getElementById("standar-bobot3").innerHTML = bobot3;
       document.getElementById("result-bobot1").innerText = bobot1;
       document.getElementById("result-bobot2").innerText = bobot2;
