@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyeksi Kualitas Target IKU</title>
+    <title>Kalkulator Kinerjamu</title>
 
     <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="assets/img/logo.png" type="img/png" />
+    <link rel="shortcut icon" href="assets/img/about/combination.png" type="img/png" />
     <!--====== Bootstrap css ======-->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <!--====== Slick Slider ======-->
@@ -36,219 +36,543 @@
 <body>
     <!--======= Start Preloader =======-->
     <div id="preloader">
-        <img class="preloader-image" width="60" src="assets/img/logo.png" alt="preloader" />
+        <img class="preloader-image" width="300" src="assets/img/about/design.png" alt="preloader" />
     </div>
     <!--======= End Preloader =======-->
 
-
-    <!--====== Start Hero Area ======-->
-    <section class="product-details p-t-50 p-b-50">
+    <section class="service-tab-section p-t-10">
         <div class="container">
-            <div class="row align-items-center justify-content-center">
-                <div class="col-lg-8">
-                    <div class="product-details-content wow fadeInRight delay-0-2s">
-                        <div class="common-heading m-b-5">
-                            <h2 class="title text-center">Cek Proyeksi Kualitas Target IKU</h2>
-                        </div>
-                        <div id="standar-target" class="ratting-price m-b-25 justify-content-center"
-                            style="display: none;">
-                            <div class="row price">
-                                <div class="p-r-10">
-                                    Target Standar :
-                                </div>
-                                <div id="standar-bobot3"></div>
-                                <div class="ratting p-l-20">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                            </div>
-                        </div>
-                        <hr class="m-b-30">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <p style="font-style: italic;">"Perhitungan berdasarkan KMK-300/KMK.01/2022 untuk IKU
-                                    Maximize dan IKU Lama"</p>
-                                    <img src="assets/img/logo.png" height="300">
-                            </div>
-                            <div class="col-lg-6">
-                                <form action="#" class="add-to-cart">
-                                    <div
-                                        style="display:flex;justify-content: space-between;width: 100%;align-items: center;">
-                                        <label>Target 2022</label>
-                                        <input type="number" value="1" step="0.01" id="target-2">
-                                    </div>
-                                    <div
-                                        style="display:flex;justify-content: space-between;width: 100%;align-items: center;">
-                                        <label>Realisasi 2022</label>
-                                        <input type="number" value="1" step="0.01" id="realisasi-2">
-                                    </div>
-                                    <div
-                                        style="display:flex;justify-content: space-between;width: 100%;align-items: center;">
-                                        <label>Target 2023</label>
-                                        <input type="number" value="1" step="0.01" id="target-1">
-                                    </div>
-                                    <div
-                                        style="display:flex;justify-content: space-between;width: 100%;align-items: center;">
-                                        <label>Realisasi 2023</label>
-                                        <input type="number" value="1" step="0.01" id="realisasi-1">
-                                    </div>
-                                    <div class="row justify-content-center m-t-20" style="width:100%;">
-                                        <button type="submit" id="check-target" class="template-btn primary-bg">Cek
-                                            Kualitas
-                                            Target Per Bobot</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        <hr>
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="common-heading text-center m-b-15">
+                        <span class="tagline color-primary-5">Transparansi Terukur, Prestasi Terarah</span>
+                        <h2 class="title">Temukan Kualitas Kinerja dengan Penuh Kejelasan di Sini</h2>
                     </div>
                 </div>
             </div>
-            <ul id="results" style="display: none;" class="nav product-information-tab p-t-55 m-b-30 justify-content-center">
-                <li><a href="#details" data-toggle="tab" class="active show">Hasilnya</a></li>
-                <li><a href="#information" data-toggle="tab" style="display: none;">Pilihan Terbaik</a></li>
-            </ul>
-            <div id="result-view" style="display: none;" class="tab-content wow fadeInUp delay-0-2s">
-                <div class="tab-pane fade active show" id="details">
-                    <div class="row justify-content-center iconic-boxes-v1">
-                        <div class="col-xl-6 col-md-6 col-sm-10">
-                            <div id="menantang-box" class="iconic-box m-t-30" style="display: flex;align-items: center;flex-direction: column;background-color: #B7E5B4;">
-                                <div id="menantang-gradient" class="icon">
-                                    <i id="menantang-icon" class="far"></i>
+        </div>
+        <div class="service-tab">
+            <div class="container">
+                <div class="service-tab-nav">
+                    <ul class="nav nav-tabs service-tab-nav justify-content-center" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" data-toggle="tab" href="#tabItem1" role="tab">
+                                <i class="far fa-browser"></i> Kualitas Komitmen Kinerja Kalkulator
+                            </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" data-toggle="tab" href="#tabItem2" role="tab">
+                                <i class="far fa-award"></i> Proyeksi Bobot Kualitas IKU
+                            </a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" data-toggle="tab" href="#tabItem3" role="tab">
+                                <i class="far fa-bullseye-arrow"></i> Proyeksi Bobot Kualitas Target IKU
+                            </a>
+                        </li>
+                        <!-- <li class="nav-item" role="presentation">
+                            <a class="nav-link" data-toggle="tab" href="#tabItem4" role="tab">
+                                <i class="far fa-coins"></i> Proyeksi KKK
+                            </a>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="service-tab-content container-fluid">
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="tabItem1" role="tabpanel">
+                        <div class="service-tab-ime text-left">
+                            <div class="service-faq">
+                                <div class="row align-items-center justify-content-center">
+                                    <div class="col-lg-6 col-md-10 order-lg-last">
+                                        <div class="faq-content">
+                                            <h3 class="service-subtitle">Frequently Asked Question</h3>
+                                            <div class="landio-accordion-v1 accordion-bordered">
+                                                <div class="accordion" id="accordionFAQ">
+                                                    <div class="accordion-item">
+                                                        <h5 class="accordion-header" id="headingOne">
+                                                            <button class="accordion-button" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                                Ini kalkulator apaan ya?
+                                                            </button>
+                                                        </h5>
+                                                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionFAQ">
+                                                            <div class="accordion-body">
+                                                                <p>Kalkulator ini berfungsi untuk kita menentukan bobot kualitas IKU dan bobot kualitas target IKU sesuai standar.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-item">
+                                                        <h5 class="accordion-header" id="headingTwo">
+                                                            <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                                Lalu jika sudah tau bobotnya, apa fungsinya?
+                                                            </button>
+                                                        </h5>
+                                                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionFAQ">
+                                                            <div class="accordion-body">
+                                                                <p>Maka itu bisa jadi petunjuk buat kamu menentukan target dan IKU yang sebaiknya kamu pilih untuk tahun ini.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-item">
+                                                        <h5 class="accordion-header" id="headingThree">
+                                                            <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                                Apa dampaknya kalau pakai IKU yang sesuai standar kualitasnya?
+                                                            </button>
+                                                        </h5>
+                                                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionFAQ">
+                                                            <div class="accordion-body">
+                                                                <p>Tentu saja IKU kamu berarti menjadi berkualitas, otomatis dalam perhitungan kualitas komitmen kinerjanya akan lebih bagus lagi.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="accordion-item">
+                                                        <h5 class="accordion-header" id="headingFour">
+                                                            <button class="accordion-button collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                                                Wah, ini dasar perhitungannya apa?
+                                                            </button>
+                                                        </h5>
+                                                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionFAQ">
+                                                            <div class="accordion-body">
+                                                                <p>Tentu saja ini sesuai aturan yang berlaku.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-9 order-lg-first">
+                                        <div class="faq-image text-lg-center m-t-md-60">
+                                            <img src="assets/img/feature/02.png" alt="faq image">
+                                        </div>
+                                    </div>
                                 </div>
-                                <h5 class="title">Masih Menantang?</h5>
-                                <h3 id="menantang" style="color:#fff">
-                                </h3>
-                            </div>
-                        </div>
-                        <div class="col-xl-6 col-md-6 col-sm-10">
-                            <div id="standardtarget-box" class="iconic-box m-t-30" style="display: flex;align-items: center;flex-direction: column;background-color: #A1EEBD;">
-                                <div class="icon icon-gradient-4">
-                                    <i class="far fa-star"></i>
-                                </div>
-                                <h5 class="title">Standar Target (Rekomendasi Kami)</h5>
-                                <h3 id="result-bobot3">
-                                </h3>
-                                <h6>Pilihan ini emang best of the best untuk jangka panjang jika memungkinkan</h6>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-md-6 col-sm-10">
-                            <div class="iconic-box m-t-30" style="display: flex;align-items: center;flex-direction: column;background-color: #F28585;height: 50vh;">
-                                <div class="icon icon-gradient-3">
-                                    <i class="far fa-chart-line-down"></i>
-                                </div>
-                                <h5 class="title">Bobot Kualitas 1</h5>
-                                <h3 id="result-bobot1">
-                                </h3>
-                                <h6 class="m-t-10" style="color:#555843">Yaaa masa mau kita pilih? :(</h6>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-md-6 col-sm-10">
-                            <div class="iconic-box m-t-30" style="display: flex;align-items: center;flex-direction: column;background-color: #FFFC9B;height: 50vh;">
-                                <div class="icon icon-gradient-6">
-                                    <i class="far fa-exclamation"></i>
-                                </div>
-                                <h5 class="title">Bobot Kualitas 2</h5>
-                                <h3 id="result-bobot2">
-                                </h3>
-                                <h6 class="m-t-10" style="color:#555843">Kalau emang udah mentok banget ya disini cocok sih!</h6>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-md-6 col-sm-10">
-                            <div class="iconic-box m-t-30"  style="display: flex;align-items: center;flex-direction: column;background-color: #A1EEBD;height: 50vh;">
-                                <div class="icon icon-gradient-5">
-                                    <i class="far fa-chart-line"></i>
-                                </div>
-                                <h5 class="title">Bobot Kualitas 4</h5>
-                                <h3 id="result-bobot4">
-                                </h3>
-                                <h6 class="m-t-10" style="color:#555843">Kalau pilih ini, yakin masih sampai indeks 120 ga? Kalau ngga mending jangan ya!</h6>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-md-6 col-sm-10">
-                            <div class="iconic-box m-t-30"  style="display: flex;align-items: center;flex-direction: column;background-color: #37B5B6;height: 50vh;">
-                                <div class="icon icon-gradient-5">
-                                    <i class="far fa-fighter-jet"></i>
-                                </div>
-                                <h5 class="title">Bobot Kualitas 5</h5>
-                                <h3 id="result-bobot5">
-                                </h3>
-                                <h6 class="m-t-10" style="color:#555843">Cocok dipilih kalau udah mau pensiun atau ada tanda-tanda mutasi :D</h6>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="tab-pane fade" id="information">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-4 col-md-6 col-sm-8 wow fadeInUp" data-wow-delay="0.3s">
-                            <div class="pricing-table pricing-secondary-1 m-t-30">
-                                <div class="plan-title-area">
-                                    <h5 class="plan-name"></h5>
-                                    <img src="assets/img/pricing/plan-icon.png" alt="Plan icon" class="plan-icon">
-                                    <svg class="plan-shape">
-                                        <path class="blob"
-                                            d="M675.762,6280.79c27.519-33.95,38.271-67.86,19.8-107.55-44.452-95.53-192.815-73.8-213.55-32.81-19.531,38.6,77.819,48.49,80.344,152.05C563.555,6341.55,636.194,6329.6,675.762,6280.79Z"
-                                            transform="translate(-479.406 -6105.56)" />
-                                    </svg>
+                    <div class="tab-pane fade" id="tabItem2" role="tabpanel">
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-10">
+                                <div class="service-tab-ime text-left">
+                                    <form action="#" class="add-to-cart">
+                                        <div
+                                            style="display:flex;justify-content: space-between;width: 100%;align-items: center;">
+                                            <label class="col-6">Apakah kamu pelaksana/fungsional non
+                                                manajerial?</label>
+                                            <select class="col-6" id="kualitaspelaksana">
+                                                <option value="0">Iya</option>
+                                                <option value="1">Bukan</option>
+                                            </select>
+                                        </div>
+                                        <div id="eselon"
+                                            style="display:none;justify-content: space-between;width: 100%;align-items: center;">
+                                            <label class="col-6">Kamu berapa level dibawah kepala kantor?</label>
+                                            <select class="col-6" id="leveleselon">
+                                                <option value="0">1 Level dibawah kepala kantor</option>
+                                                <option value="1">2 Level dibawah kepala kantor</option>
+                                            </select>
+                                        </div>
+                                        <div id="ikucascading"
+                                            style="display:none;justify-content: space-between;width: 100%;align-items: center;">
+                                            <label class="col-6">Apakah ini IKU yang ada di kepala kantormu juga?</label>
+                                            <select class="col-6" id="kualitascascading">
+                                                <option value="0">Tidak</option>
+                                                <option value="1">Iya</option>
+                                            </select>
+                                        </div>
+                                        <div id="validitascascading"
+                                            style="display:none;justify-content: space-between;width: 100%;align-items: center;">
+                                            <label class="col-6">Seberapa dekat keterlibatannya dengan SSnya? Kalau di SS tersebut ada lebih dari 1 IKU, sudah pasti pilih proxy</label>
+                                            <select class="col-6" id="kualitasvaliditas">
+                                                <option value="0">Proxy</option>
+                                                <option value="1">Exact</option>
+                                            </select>
+                                        </div>
+                                        <div id="kendalicascading"
+                                            style="display:none;justify-content: space-between;width: 100%;align-items: center;">
+                                            <label class="col-6">Seberapa mampu kita mengontrol IKUnya? Misalnya ada keterlibatan dari pihak lain, dominan di siapa?</label>
+                                            <select class="col-6" id="kualitaskendali">
+                                                <option value="0">Ga ada hubungan dengan pihak lain sih</option>
+                                                <option value="1">Ada butuh dari pihak lain yang memberikan kontribusi sih. Tapi aku juga ngerjain bagianku</option>
+                                                <option value="2">Aku ga bisa ngapa-ngapain, nilainya murni dari pihak lain</option>
+                                            </select>
+                                        </div>
+                                        <div id="kual1"
+                                            style="display:flex;justify-content: space-between;width: 100%;align-items: center;">
+                                            <label class="col-6">Apakah IKU ini mengukur kualitas nilai pekerjaan ? Misalnya survei atau hasil penilaian suatu laporan</label>
+                                            <select class="col-6" id="kualitas1">
+                                                <option value="1">Iya</option>
+                                                <option value="0">Tidak</option>
+                                            </select>
+                                        </div>
+                                        <div id="kual2"
+                                            style="display:flex;justify-content: space-between;width: 100%;align-items: center;">
+                                            <label class="col-6">Apakah IKU ini mengukur akurasi / deviasi hasil pekerjaan? Misalnya penyelesaian laporan yang akurat </label>
+                                            <select class="col-6" id="kualitas2">
+                                                <option value="1">Iya</option>
+                                                <option value="0">Tidak</option>
+                                            </select>
+                                        </div>
+                                        <div id="kual3"
+                                            style="display:flex;justify-content: space-between;width: 100%;align-items: center;">
+                                            <label class="col-6">Apakah IKU ini mengukur nilai nominal/ persentase nominal rupiah ?</label>
+                                            <select class="col-6" id="kualitas3">
+                                                <option value="1">Iya</option>
+                                                <option value="0">Tidak</option>
+                                            </select>
+                                        </div>
+                                        <div id="kual4"
+                                            style="display:flex;justify-content: space-between;width: 100%;align-items: center;">
+                                            <label class="col-6">Apakah IKU ini mengukur tindak lanjut rekomendasi pihak eksternal ? Misalnya pihak eksternal memberikan hal-hal untuk ditindaklanjuti, dan diformulasikan dalam IKU ini</label>
+                                            <select class="col-6" id="kualitas4">
+                                                <option value="1">Iya</option>
+                                                <option value="0">Tidak</option>
+                                            </select>
+                                        </div>
+                                        <div id="kual5"
+                                            style="display:flex;justify-content: space-between;width: 100%;align-items: center;">
+                                            <label class="col-6">Apakah IKU ini mengukur penyelesaian kebijakan yang ditetapkan Eselon I ?</label>
+                                            <select class="col-6" id="kualitas5">
+                                                <option value="1">Iya</option>
+                                                <option value="0">Tidak</option>
+                                            </select>
+                                        </div>
+                                        <div id="kual6"
+                                            style="display:flex;justify-content: space-between;width: 100%;align-items: center;">
+                                            <label class="col-6">Apakah IKU ini mengukur ketepatan waktu ? Misalnya ketepatan waktu penyampaian laporan. Artinya laporannya bukan hanya dibuat, tapi juga memiliki deadline penyampaiannya yang kamu kejar</label>
+                                            <select class="col-6" id="kualitas6">
+                                                <option value="1">Iya</option>
+                                                <option value="0">Tidak</option>
+                                            </select>
+                                        </div>
+                                        <div id="kual7"
+                                            style="display:flex;justify-content: space-between;width: 100%;align-items: center;">
+                                            <label class="col-6">Apakah IKU ini memiliki keterlibatan pihak selain kamu untuk
+                                                kamu menyelesaikannya? Misalnya yang menilai orang lain atau disurvei orang lain</label>
+                                            <select class="col-6" id="kualitas7">
+                                                <option value="1">Iya</option>
+                                                <option value="0">Tidak</option>
+                                            </select>
+                                        </div>
+                                        <div class="row justify-content-center m-t-20"
+                                            style="width:100%;">
+                                            <button type="submit" id="check-target-kualitas"
+                                                class="template-btn primary-bg">Cek Bobot
+                                                Kualitas IKU</button>
+                                        </div>
+                                    </form>
                                 </div>
-                                <div class="plan-cost">
-                                    Under Maintenance - On Progress
-                                    <!-- <span class="currency">Target</span>
-                                    <span class="price"></span>
-                                    <span class="plan-type">/ Bobot</span>
-                                    <span class="plan-type">3</span> -->
-                                </div>
-                                <ul class="plan-feature">
-                                    <!-- <li>Social Media Marketing</li>
-                                    <li>2.100 Keywords</li>
-                                    <li>One Way Link Building</li>
-                                    <li class="disabled-feature">5 Free Optimization</li>
-                                    <li class="disabled-feature">3 Press Releases</li> -->
-                                </ul>
-                                <!-- <a href="#" class="template-btn">Select Plan <i class="fas fa-arrow-right"></i></a> -->
                             </div>
+                            <div class="col-10">
+                                <div id="result-kualitas-view" style="display: none;" class="col-12 tab-content wow fadeInUp delay-0-2s">
+                                    <div class="tab-pane fade active show">
+                                        <div class="row justify-content-center iconic-boxes-v1">
+                                            <div class="col-xl-10 col-md-10 col-sm-10">
+                                                <div id="result-kualitas-box" class="iconic-box m-t-30"
+                                                    style="display: flex;align-items: center;flex-direction: column;background-color: #37B5B6;">
+                                                    <div id="result-kualitas-gradient" class="icon">
+                                                        <i id="result-kualitas-icon" class="far"></i>
+                                                    </div>
+                                                    <!-- <h5 class="title">Bobot Kualitas Target IKUnya</h5> -->
+                                                    <h3 id="result-kualitas-target">
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tabItem3" role="tabpanel">
+                        <div class="service-tab-ime text-center">
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-lg-8">
+                                    <div class="product-details-content wow fadeInRight delay-0-2s">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <ul id="target-tab" class="nav nav-tabs product-information-tab">
+                                                    <li role="presentation">
+                                                        <a class="active" data-toggle="tab" href="#maximize" role="tab">
+                                                            Maximize
+                                                        </a>
+                                                    </li>
+                                                    <li role="presentation">
+                                                        <a data-toggle="tab" href="#minimize" role="tab">
+                                                            Minimize
+                                                        </a>
+                                                    </li>
+                                                    <li role="presentation">
+                                                        <a data-toggle="tab" href="#baru" role="tab">
+                                                            IKU Baru </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="tab-content col-lg-6">
+                                                <div class="tab-pane fade show active" id="maximize" role="tabpanel">
+                                                    <div class="service-tab-ime text-center">
+                                                        <form action="#" class="add-to-cart">
+                                                            <div
+                                                                style="display:flex;justify-content: space-between;width: 100%;align-items: center;">
+                                                                <label>Target 2022</label>
+                                                                <input type="number" value="1" step="0.01"
+                                                                    id="target-2">
+                                                            </div>
+                                                            <div
+                                                                style="display:flex;justify-content: space-between;width: 100%;align-items: center;">
+                                                                <label>Realisasi 2022</label>
+                                                                <input type="number" value="1" step="0.01"
+                                                                    id="realisasi-2">
+                                                            </div>
+                                                            <div
+                                                                style="display:flex;justify-content: space-between;width: 100%;align-items: center;">
+                                                                <label>Target 2023</label>
+                                                                <input type="number" value="1" step="0.01"
+                                                                    id="target-1">
+                                                            </div>
+                                                            <div
+                                                                style="display:flex;justify-content: space-between;width: 100%;align-items: center;">
+                                                                <label>Realisasi 2023</label>
+                                                                <input type="number" value="1" step="0.01"
+                                                                    id="realisasi-1">
+                                                            </div>
+                                                            <div class="row justify-content-center m-t-20"
+                                                                style="width:100%;">
+                                                                <button type="submit" id="check-target"
+                                                                    class="template-btn primary-bg">Cek
+                                                                    Kualitas
+                                                                    Target Per Bobot</button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="minimize" role="tabpanel">
+                                                    <div class="service-tab-ime text-center">
+                                                        <form action="#" class="add-to-cart">
+                                                            <div
+                                                                style="display:flex;justify-content: space-between;width: 100%;align-items: center;">
+                                                                <label>Target 2022</label>
+                                                                <input type="number" value="1" step="0.01"
+                                                                    id="target-min-2">
+                                                            </div>
+                                                            <div
+                                                                style="display:flex;justify-content: space-between;width: 100%;align-items: center;">
+                                                                <label>Realisasi 2022</label>
+                                                                <input type="number" value="1" step="0.01"
+                                                                    id="realisasi-min-2">
+                                                            </div>
+                                                            <div
+                                                                style="display:flex;justify-content: space-between;width: 100%;align-items: center;">
+                                                                <label>Target 2023</label>
+                                                                <input type="number" value="1" step="0.01"
+                                                                    id="target-min-1">
+                                                            </div>
+                                                            <div
+                                                                style="display:flex;justify-content: space-between;width: 100%;align-items: center;">
+                                                                <label>Realisasi 2023</label>
+                                                                <input type="number" value="1" step="0.01"
+                                                                    id="realisasi-min-1">
+                                                            </div>
+                                                            <div class="row justify-content-center m-t-20"
+                                                                style="width:100%;">
+                                                                <button type="submit" id="check-target-minimize"
+                                                                    class="template-btn primary-bg">Cek
+                                                                    Kualitas
+                                                                    Target Per Bobot</button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                                <div class="tab-pane fade" id="baru" role="tabpanel">
+                                                    <div class="service-tab-ime text-left">
+                                                        <form action="#" class="add-to-cart">
+                                                            <div
+                                                                style="display:flex;justify-content: space-between;width: 100%;align-items: center;">
+                                                                <label>Apakah kamu pelaksana atau fungsional non
+                                                                    manajerial?</label>
+                                                                <select id="pelaksana">
+                                                                    <option value="0">Iya</option>
+                                                                    <option value="1">Bukan</option>
+                                                                </select>
+                                                            </div>
+                                                            <div id="barucascading"
+                                                                style="display:none;justify-content: space-between;width: 100%;align-items: center;">
+                                                                <label>Apakah ini IKU yang ada di kepala kantormu juga?</label>
+                                                                <select id="cascadingbaru">
+                                                                    <option value="0">Tidak</option>
+                                                                    <option value="1">Iya</option>
+                                                                </select>
+                                                            </div>
+                                                            <div id="validitasbaru"
+                                                                style="display:none;justify-content: space-between;width: 100%;align-items: center;">
+                                                                <label>Validitas IKUnya gimana? Dekat ga dengan SSnya?</label>
+                                                                <select id="baruvaliditas">
+                                                                    <option value="0">Proxy</option>
+                                                                    <option value="1">Exact</option>
+                                                                </select>
+                                                            </div>
+                                                            <div id="kendalibaru"
+                                                                style="display:none;justify-content: space-between;width: 100%;align-items: center;">
+                                                                <label>Gimana keterlibatan kita dalam mengerjakannya? Ada pihak lain?</label>
+                                                                <select id="barukendali">
+                                                                    <option value="0">Ga ada hubungan dengan pihak lain sih</option>
+                                                                    <option value="1">Ada pihak lain, tapi aku kerja juga</option>
+                                                                    <option value="2">Pihak lain aja, aku ga ngasih apa-apa</option>
+                                                                </select>
+                                                            </div>
+                                                            <div id="barupoin1"
+                                                                style="display:flex;justify-content: space-between;width: 100%;align-items: center;">
+                                                                <label>Apakah IKU ini mengukur ketepatan waktu /
+                                                                    kualitas
+                                                                    nilai / akurasi deviasi pekerjaan ?</label>
+                                                                <select id="poin1">
+                                                                    <option value="1">Iya</option>
+                                                                    <option value="0">Tidak</option>
+                                                                </select>
+                                                            </div>
+                                                            <div id="barupoin2"
+                                                                style="display:flex;justify-content: space-between;width: 100%;align-items: center;">
+                                                                <label>Apakah IKU ini memiliki tingkat kendali moderate
+                                                                    /
+                                                                    low ? Artinya ada keterlibatan pihak eksternal untuk
+                                                                    kamu menyelesaikannya</label>
+                                                                <select id="poin2">
+                                                                    <option value="1">Iya</option>
+                                                                    <option value="0">Tidak</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="row justify-content-center m-t-20"
+                                                                style="width:100%;">
+                                                                <button type="submit" id="check-target-baru"
+                                                                    class="template-btn primary-bg">Cek
+                                                                    Kualitas
+                                                                    Target Per Bobot</button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="result-view" style="display: none;"
+                                    class="tab-content wow fadeInUp delay-0-2s">
+                                    <div class="tab-pane fade active show">
+                                        <div class="row justify-content-center iconic-boxes-v1">
+                                            <div class="col-xl-6 col-md-6 col-sm-10">
+                                                <div id="menantang-box" class="iconic-box m-t-30"
+                                                    style="display: flex;align-items: center;flex-direction: column;background-color: #B7E5B4;">
+                                                    <div id="menantang-gradient" class="icon">
+                                                        <i id="menantang-icon" class="far"></i>
+                                                    </div>
+                                                    <h5 class="title">Masih Menantang?</h5>
+                                                    <h3 id="menantang" style="color:#fff">
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6 col-md-6 col-sm-10">
+                                                <div id="standardtarget-box" class="iconic-box m-t-30"
+                                                    style="display: flex;align-items: center;flex-direction: column;background-color: #A1EEBD;">
+                                                    <div class="icon icon-gradient-4">
+                                                        <i class="far fa-star"></i>
+                                                    </div>
+                                                    <h5 class="title">Standar Target (Rekomendasi Kami)</h5>
+                                                    <h3 id="result-bobot3">
+                                                    </h3>
+                                                    <h6>Pilihan ini emang best of the best untuk jangka panjang jika
+                                                        memungkinkan</h6>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-3 col-md-6 col-sm-10">
+                                                <div class="iconic-box m-t-30"
+                                                    style="display: flex;align-items: center;flex-direction: column;background-color: #F28585;height: 50vh;">
+                                                    <div class="icon icon-gradient-3">
+                                                        <i class="far fa-chart-line-down"></i>
+                                                    </div>
+                                                    <h5 class="title">Bobot Kualitas 1</h5>
+                                                    <h3 id="result-bobot1">
+                                                    </h3>
+                                                    <h6 class="m-t-10" style="color:#555843">Yaaa masa mau kita pilih?
+                                                        :(
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-3 col-md-6 col-sm-10">
+                                                <div class="iconic-box m-t-30"
+                                                    style="display: flex;align-items: center;flex-direction: column;background-color: #FFFC9B;height: 50vh;">
+                                                    <div class="icon icon-gradient-6">
+                                                        <i class="far fa-exclamation"></i>
+                                                    </div>
+                                                    <h5 class="title">Bobot Kualitas 2</h5>
+                                                    <h3 id="result-bobot2">
+                                                    </h3>
+                                                    <h6 class="m-t-10" style="color:#555843">Kalau emang udah mentok
+                                                        banget
+                                                        ya disini cocok sih!</h6>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-3 col-md-6 col-sm-10">
+                                                <div class="iconic-box m-t-30"
+                                                    style="display: flex;align-items: center;flex-direction: column;background-color: #A1EEBD;height: 50vh;">
+                                                    <div class="icon icon-gradient-5">
+                                                        <i class="far fa-chart-line"></i>
+                                                    </div>
+                                                    <h5 class="title">Bobot Kualitas 4</h5>
+                                                    <h3 id="result-bobot4">
+                                                    </h3>
+                                                    <h6 class="m-t-10" style="color:#555843">Kalau pilih ini, yakin
+                                                        masih
+                                                        sampai indeks 120 ga? Kalau ngga mending jangan ya!</h6>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-3 col-md-6 col-sm-10">
+                                                <div class="iconic-box m-t-30"
+                                                    style="display: flex;align-items: center;flex-direction: column;background-color: #37B5B6;height: 50vh;">
+                                                    <div class="icon icon-gradient-5">
+                                                        <i class="far fa-fighter-jet"></i>
+                                                    </div>
+                                                    <h5 class="title">Bobot Kualitas 5</h5>
+                                                    <h3 id="result-bobot5">
+                                                    </h3>
+                                                    <h6 class="m-t-10" style="color:#555843">Cocok dipilih kalau udah
+                                                        mau
+                                                        pensiun atau ada tanda-tanda mutasi :D</h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="result-baru-view" style="display: none;" class="col-12 tab-content wow fadeInUp delay-0-2s">
+                                    <div class="tab-pane fade active show">
+                                        <div class="row justify-content-center iconic-boxes-v1">
+                                            <div class="col-xl-10 col-md-10 col-sm-10">
+                                                <div id="result-baru-box" class="iconic-box m-t-30"
+                                                    style="display: flex;align-items: center;flex-direction: column;background-color: #37B5B6;">
+                                                    <div id="result-baru-gradient" class="icon">
+                                                        <i id="result-baru-icon" class="far"></i>
+                                                    </div>
+                                                    <!-- <h5 class="title">Bobot Kualitas Target IKUnya</h5> -->
+                                                    <h3 id="result-baru-target">
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="tabItem4" role="tabpanel">
+                        <div class="service-tab-ime text-center">
+                            <img src="assets/img/service-tab-img.jpg" alt="Image">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!--====== End Hero Area ======-->
-
-    <!-- ====== Start CTA Section ======-->
-    <!-- <section class="cta-section cta-with-particle border-bottom-primary p-t-130 p-b-130">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="cta-content wow fadeInUp">
-                        <div class="common-heading tagline-boxed m-b-50 text-center">
-                            <span class="tagline">Download Apps</span>
-                            <h2 class="title">Get our apps very easily, we’re available on store</h2>
-                        </div>
-
-                        <ul class="cta-btns justify-content-center">
-                            <li>
-                                <a href="services.html" class="template-btn">
-                                    Apple Store <i class="fab fa-apple"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="services.html" class="template-btn bordered-btn">
-                                    Google Play <i class="fab fa-google-play"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="cta-particle d-none d-md-block">
-                <img class="particle-left" src="assets/img/particle/cta-left-particle-1.png" alt="cta particle 1">
-                <img class="particle-right" src="assets/img/particle/cta-right-particle-1.png" alt="cta particle 2">
-            </div>
-        </div>
-    </section> -->
-    <!--====== End CTA Section ====== -->
 
     <!--====== Start Scroll To Top ======-->
     <a href="#" class="back-to-top" id="scroll-top">
