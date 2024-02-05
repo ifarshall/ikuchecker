@@ -725,7 +725,9 @@
         indeks125 = false;
       }
       document.getElementById("result-view").style.display = "block";
-      document.getElementById("result-view").scrollIntoView({ behavior: "smooth" });
+      document
+        .getElementById("result-view")
+        .scrollIntoView({ behavior: "smooth" });
       document.getElementById("result-bobot1").innerText = bobot1;
       document.getElementById("result-bobot2").innerText = bobot2;
       document.getElementById("result-bobot3").innerText = bobot3;
@@ -790,10 +792,10 @@
       event.preventDefault();
       const target2 = parseFloat($("#target-min-2").val());
       let realisasi2 = parseFloat($("#realisasi-min-2").val());
-      const indexCapaian2 = (1+(1 - realisasi2 / target2));
+      const indexCapaian2 = 1 + (1 - realisasi2 / target2);
       const target1 = parseFloat($("#target-min-1").val());
       let realisasi1 = parseFloat($("#realisasi-min-1").val());
-      const indexCapaian1 = (1+(1 - realisasi1 / target1));
+      const indexCapaian1 = 1 + (1 - realisasi1 / target1);
       let indeks125 = false;
       if (indexCapaian2 >= 1.25 && indexCapaian1 >= 1.25) {
         bobot1 = parseFloat((1.1 * realisasi1).toFixed(3));
@@ -811,14 +813,16 @@
         indeks125 = false;
       }
       document.getElementById("result-view").style.display = "block";
-      document.getElementById("result-view").scrollIntoView({ behavior: "smooth" });
+      document
+        .getElementById("result-view")
+        .scrollIntoView({ behavior: "smooth" });
       document.getElementById("result-bobot1").innerText = bobot1;
       document.getElementById("result-bobot2").innerText = bobot2;
       document.getElementById("result-bobot3").innerText = bobot3;
       document.getElementById("result-bobot4").innerText = bobot4;
       document.getElementById("result-bobot5").innerText = bobot5;
       if (indeks125) {
-        if(realisasi1==0||realisasi2==0){
+        if (realisasi1 == 0 || realisasi2 == 0) {
           document.getElementById("menantang").innerText =
             "Mungkin ini masih menantang, realisasi 0 jadi sudah maksimal. Kalau dihitung pasti lebih dari 125 indeks capaiannya. Kalau mau 120 bisa realisasi diisi 0.08";
           document.getElementById("menantang").style.color = "#fff";
@@ -851,7 +855,9 @@
           document
             .getElementById("menantang-gradient")
             .classList.add("icon-gradient-3");
-          document.getElementById("menantang-icon").classList.add("fa-sad-tear");
+          document
+            .getElementById("menantang-icon")
+            .classList.add("fa-sad-tear");
         }
       } else {
         if (realisasi2 == target2 && realisasi1 == target1) {
@@ -892,16 +898,16 @@
         }
       }
     });
-    $("#pelaksana").change(function() {
+    $("#pelaksana").change(function () {
       if ($(this).val() == "1") {
         $("#barucascading").css("display", "flex");
       } else {
         $("#barucascading").css("display", "none");
       }
     });
-    $("#cascadingbaru").change(function() {
+    $("#cascadingbaru").change(function () {
       if ($(this).val() == "1") {
-        console.log('masuk?')
+        console.log("masuk?");
         $("#barupoin1").css("display", "none");
         $("#barupoin2").css("display", "none");
         $("#validitasbaru").css("display", "flex");
@@ -913,20 +919,21 @@
         $("#kendalibaru").css("display", "none");
       }
     });
-    $("#check-target-baru").on("click", function(e){
+    $("#check-target-baru").on("click", function (e) {
       e.preventDefault();
       const pelaksana = $("#pelaksana").val();
       const poin1 = $("#poin1").val();
       const poin2 = $("#poin2").val();
       let resultbaru;
-      if(pelaksana == "0"){
-        if(poin1 == "1"&& poin2 == "1"){
-          resultbaru = "Waaah, bobotnya 3 nih, sesuai standar bobot kualitas target IKU!!"
+      if (pelaksana == "0") {
+        if (poin1 == "1" && poin2 == "1") {
+          resultbaru =
+            "Waaah, bobotnya 3 nih, sesuai standar bobot kualitas target IKU!!";
           document.getElementById("result-baru-target").innerText = resultbaru;
           document.getElementById("result-baru-target").style.color = "#000";
           document.getElementById("result-baru-box").style.backgroundColor =
             "#B7E5B4";
-            document
+          document
             .getElementById("result-baru-gradient")
             .classList.remove("icon-gradient-3");
           document
@@ -938,7 +945,7 @@
           document
             .getElementById("result-baru-icon")
             .classList.add("fa-laugh-squint");
-        } else if(poin1 == "0"&&poin2=="0"){
+        } else if (poin1 == "0" && poin2 == "0") {
           resultbaru = "Bobotnya cuma 1 ajaaa, IKUnya kurang berkualitas :(";
           document.getElementById("result-baru-target").innerText = resultbaru;
           document.getElementById("result-baru-target").style.color = "#fff";
@@ -957,12 +964,13 @@
             .getElementById("result-baru-icon")
             .classList.add("fa-sad-tear");
         } else {
-          resultbaru = "Bobotnya 2 poin! Rata-rata IKU baru pelaksana memang bobotnya segini kak!";
+          resultbaru =
+            "Bobotnya 2 poin! Rata-rata IKU baru pelaksana memang bobotnya segini kak!";
           document.getElementById("result-baru-target").innerText = resultbaru;
           document.getElementById("result-baru-target").style.color = "#000";
           document.getElementById("result-baru-box").style.backgroundColor =
             "#B7E5B4";
-            document
+          document
             .getElementById("result-baru-gradient")
             .classList.remove("icon-gradient-3");
           document
@@ -978,13 +986,14 @@
       } else {
         const validitas = $("#baruvaliditas").val();
         const kendali = $("#barukendali").val();
-        if(validitas == "0"&&kendali=="0"){
-          resultbaru = "Waaah, bobotnya 3 nih, sesuai standar bobot kualitas target IKU!!"
+        if (validitas == "0" && kendali == "0") {
+          resultbaru =
+            "Waaah, bobotnya 3 nih, sesuai standar bobot kualitas target IKU!!";
           document.getElementById("result-baru-target").innerText = resultbaru;
           document.getElementById("result-baru-target").style.color = "#000";
           document.getElementById("result-baru-box").style.backgroundColor =
             "#B7E5B4";
-            document
+          document
             .getElementById("result-baru-gradient")
             .classList.remove("icon-gradient-3");
           document
@@ -996,13 +1005,14 @@
           document
             .getElementById("result-baru-icon")
             .classList.add("fa-laugh-squint");
-        } else if (validitas=="0"&&(kendali=="1"||kendali=="2")){
-          resultbaru = "OMG! Bobotnya 4 loh, itu udah diatas target standar! Targetnya menantang banget nih buat kamu"
+        } else if (validitas == "0" && (kendali == "1" || kendali == "2")) {
+          resultbaru =
+            "OMG! Bobotnya 4 loh, itu udah diatas target standar! Targetnya menantang banget nih buat kamu";
           document.getElementById("result-baru-target").innerText = resultbaru;
           document.getElementById("result-baru-target").style.color = "#000";
           document.getElementById("result-baru-box").style.backgroundColor =
             "#B7E5B4";
-            document
+          document
             .getElementById("result-baru-gradient")
             .classList.remove("icon-gradient-3");
           document
@@ -1014,13 +1024,14 @@
           document
             .getElementById("result-baru-icon")
             .classList.add("fa-laugh-squint");
-        } else if (validitas=="1"&&(kendali=="1"||kendali=="2")){
-          resultbaru = "Luar biasa banget ini! Bobotnya 5 loh!!! Waaah semoga lancar yaa mengerjakannya! Kayaknya bakal susah banget nih untuk dicapai!"
+        } else if (validitas == "1" && (kendali == "1" || kendali == "2")) {
+          resultbaru =
+            "Luar biasa banget ini! Bobotnya 5 loh!!! Waaah semoga lancar yaa mengerjakannya! Kayaknya bakal susah banget nih untuk dicapai!";
           document.getElementById("result-baru-target").innerText = resultbaru;
           document.getElementById("result-baru-target").style.color = "#000";
           document.getElementById("result-baru-box").style.backgroundColor =
             "#B7E5B4";
-            document
+          document
             .getElementById("result-baru-gradient")
             .classList.remove("icon-gradient-3");
           document
@@ -1033,30 +1044,33 @@
             .getElementById("result-baru-icon")
             .classList.add("fa-laugh-squint");
         } else {
-          resultbaru = "Maaaaaf, kayaknya kamu salah pilih deh karena kombinasi exact itu ga mungkin ke high! >///<";
+          resultbaru =
+            "Maaaaaf, kayaknya kamu salah pilih deh karena kombinasi exact itu ga mungkin ke high! >///<";
           document.getElementById("result-baru-target").innerText = resultbaru;
-            document.getElementById("result-baru-target").style.color = "#fff";
-            document.getElementById("result-baru-box").style.backgroundColor =
-              "#F28585";
-            document
-              .getElementById("result-baru-gradient")
-              .classList.remove("icon-gradient-4");
-            document
-              .getElementById("result-baru-icon")
-              .classList.remove("fa-laugh-squint");
-            document
-              .getElementById("result-baru-gradient")
-              .classList.add("icon-gradient-3");
-            document
-              .getElementById("result-baru-icon")
-              .classList.add("fa-sad-tear");
+          document.getElementById("result-baru-target").style.color = "#fff";
+          document.getElementById("result-baru-box").style.backgroundColor =
+            "#F28585";
+          document
+            .getElementById("result-baru-gradient")
+            .classList.remove("icon-gradient-4");
+          document
+            .getElementById("result-baru-icon")
+            .classList.remove("fa-laugh-squint");
+          document
+            .getElementById("result-baru-gradient")
+            .classList.add("icon-gradient-3");
+          document
+            .getElementById("result-baru-icon")
+            .classList.add("fa-sad-tear");
         }
       }
       document.getElementById("result-baru-view").style.display = "block";
-      document.getElementById("result-baru-view").scrollIntoView({ behavior: "smooth" });
+      document
+        .getElementById("result-baru-view")
+        .scrollIntoView({ behavior: "smooth" });
     });
 
-    $("#kualitaspelaksana").change(function() {
+    $("#kualitaspelaksana").change(function () {
       if ($(this).val() == "1") {
         $("#ikucascading").css("display", "flex");
         $("#eselon").css("display", "flex");
@@ -1065,7 +1079,7 @@
         $("#eselon").css("display", "none");
       }
     });
-    $("#kualitascascading").change(function() {
+    $("#kualitascascading").change(function () {
       if ($(this).val() == "1") {
         $("#kual1").css("display", "none");
         $("#kual2").css("display", "none");
@@ -1089,7 +1103,7 @@
       }
     });
 
-    $("#check-target-kualitas").on("click", function(e){
+    $("#check-target-kualitas").on("click", function (e) {
       e.preventDefault();
       const pelaksana = $("#kualitaspelaksana").val();
       const poin1 = $("#kualitas1").val();
@@ -1100,14 +1114,25 @@
       const poin6 = $("#kualitas6").val();
       const poin7 = $("#kualitas7").val();
       let resultkualitas;
-      if(pelaksana == "0"){
-        if((poin1 == "1"||poin2 =="1"||poin3 =="1"||poin4 =="1"||poin5 =="1"||poin6 =="1")&& poin7 == "1"){
-          resultkualitas = "Waaah, bobotnya 11 nih, melebihi standar bobot kualitas IKU!!"
-          document.getElementById("result-kualitas-target").innerText = resultkualitas;
-          document.getElementById("result-kualitas-target").style.color = "#000";
+      if (pelaksana == "0") {
+        if (
+          (poin1 == "1" ||
+            poin2 == "1" ||
+            poin3 == "1" ||
+            poin4 == "1" ||
+            poin5 == "1" ||
+            poin6 == "1") &&
+          poin7 == "1"
+        ) {
+          resultkualitas =
+            "Waaah, bobotnya 11 nih, melebihi standar bobot kualitas IKU!!";
+          document.getElementById("result-kualitas-target").innerText =
+            resultkualitas;
+          document.getElementById("result-kualitas-target").style.color =
+            "#000";
           document.getElementById("result-kualitas-box").style.backgroundColor =
             "#B7E5B4";
-            document
+          document
             .getElementById("result-kualitas-gradient")
             .classList.remove("icon-gradient-3");
           document
@@ -1119,10 +1144,21 @@
           document
             .getElementById("result-kualitas-icon")
             .classList.add("fa-laugh-squint");
-        } else if(poin1 == "1"&&poin2 =="1"&&poin3 =="1"&&poin4 =="1"&&poin5 =="1"&&poin6 =="1"&&poin7=="0"){
-          resultkualitas = "Bobotnya cuma 9 ajaaa, IKUnya kurang berkualitas :(. Jangan cuma ngukur output atau activity saja, coba ngukur waktunya juga kak!";
-          document.getElementById("result-kualitas-target").innerText = resultkualitas;
-          document.getElementById("result-kualitas-target").style.color = "#fff";
+        } else if (
+          poin1 == "1" &&
+          poin2 == "1" &&
+          poin3 == "1" &&
+          poin4 == "1" &&
+          poin5 == "1" &&
+          poin6 == "1" &&
+          poin7 == "0"
+        ) {
+          resultkualitas =
+            "Bobotnya cuma 9 ajaaa, IKUnya kurang berkualitas :(. Jangan cuma ngukur output atau activity saja, coba ngukur waktunya juga kak!";
+          document.getElementById("result-kualitas-target").innerText =
+            resultkualitas;
+          document.getElementById("result-kualitas-target").style.color =
+            "#fff";
           document.getElementById("result-kualitas-box").style.backgroundColor =
             "#F28585";
           document
@@ -1138,12 +1174,15 @@
             .getElementById("result-kualitas-icon")
             .classList.add("fa-sad-tear");
         } else {
-          resultkualitas = "Bobotnya 10 poin! Standar kualitas IKU pelaksana memang bobotnya segini kak!";
-          document.getElementById("result-kualitas-target").innerText = resultkualitas;
-          document.getElementById("result-kualitas-target").style.color = "#000";
+          resultkualitas =
+            "Bobotnya 10 poin! Standar kualitas IKU pelaksana memang bobotnya segini kak!";
+          document.getElementById("result-kualitas-target").innerText =
+            resultkualitas;
+          document.getElementById("result-kualitas-target").style.color =
+            "#000";
           document.getElementById("result-kualitas-box").style.backgroundColor =
             "#B7E5B4";
-            document
+          document
             .getElementById("result-kualitas-gradient")
             .classList.remove("icon-gradient-3");
           document
@@ -1159,15 +1198,27 @@
       } else {
         const kualitascascading = $("#kualitascascading").val();
         const eselon = $("#eselon").val();
-        if(kualitascascading == "0"){
-          if(eselon=="1"){
-            if((poin1 == "1"||poin2 =="1"||poin3 =="1"||poin4 =="1"||poin5 =="1"||poin6 =="1")&& poin7 == "1"){
-              resultkualitas = "Waaah, bobotnya 11 nih, sesuai standar bobot kualitas IKU!!"
-              document.getElementById("result-kualitas-target").innerText = resultkualitas;
-              document.getElementById("result-kualitas-target").style.color = "#000";
-              document.getElementById("result-kualitas-box").style.backgroundColor =
-                "#B7E5B4";
-                document
+        if (kualitascascading == "0") {
+          if (eselon == "1") {
+            if (
+              (poin1 == "1" ||
+                poin2 == "1" ||
+                poin3 == "1" ||
+                poin4 == "1" ||
+                poin5 == "1" ||
+                poin6 == "1") &&
+              poin7 == "1"
+            ) {
+              resultkualitas =
+                "Waaah, bobotnya 11 nih, sesuai standar bobot kualitas IKU!!";
+              document.getElementById("result-kualitas-target").innerText =
+                resultkualitas;
+              document.getElementById("result-kualitas-target").style.color =
+                "#000";
+              document.getElementById(
+                "result-kualitas-box"
+              ).style.backgroundColor = "#B7E5B4";
+              document
                 .getElementById("result-kualitas-gradient")
                 .classList.remove("icon-gradient-3");
               document
@@ -1179,12 +1230,24 @@
               document
                 .getElementById("result-kualitas-icon")
                 .classList.add("fa-laugh-squint");
-            } else if(poin1 == "1"&&poin2 =="1"&&poin3 =="1"&&poin4 =="1"&&poin5 =="1"&&poin6 =="1"&&poin7=="0"){
-              resultkualitas = "Bobotnya cuma 9 ajaaa, IKUnya kurang berkualitas :(. Jangan cuma ngukur output atau activity saja, coba ngukur waktunya juga kak!";
-              document.getElementById("result-kualitas-target").innerText = resultkualitas;
-              document.getElementById("result-kualitas-target").style.color = "#fff";
-              document.getElementById("result-kualitas-box").style.backgroundColor =
-                "#F28585";
+            } else if (
+              poin1 == "1" &&
+              poin2 == "1" &&
+              poin3 == "1" &&
+              poin4 == "1" &&
+              poin5 == "1" &&
+              poin6 == "1" &&
+              poin7 == "0"
+            ) {
+              resultkualitas =
+                "Bobotnya cuma 9 ajaaa, IKUnya kurang berkualitas :(. Jangan cuma ngukur output atau activity saja, coba ngukur waktunya juga kak!";
+              document.getElementById("result-kualitas-target").innerText =
+                resultkualitas;
+              document.getElementById("result-kualitas-target").style.color =
+                "#fff";
+              document.getElementById(
+                "result-kualitas-box"
+              ).style.backgroundColor = "#F28585";
               document
                 .getElementById("result-kualitas-gradient")
                 .classList.remove("icon-gradient-4");
@@ -1198,12 +1261,16 @@
                 .getElementById("result-kualitas-icon")
                 .classList.add("fa-sad-tear");
             } else {
-              resultkualitas = "Bobotnya 10 poin! Rata-rata kualitas IKU pejabat 2 level dibawah kepala kantor memang bobotnya segini sih, tapi coba naikin lagi yuk!";
-              document.getElementById("result-kualitas-target").innerText = resultkualitas;
-              document.getElementById("result-kualitas-target").style.color = "#000";
-              document.getElementById("result-kualitas-box").style.backgroundColor =
-                "#B7E5B4";
-                document
+              resultkualitas =
+                "Bobotnya 10 poin! Rata-rata kualitas IKU pejabat 2 level dibawah kepala kantor memang bobotnya segini sih, tapi coba naikin lagi yuk!";
+              document.getElementById("result-kualitas-target").innerText =
+                resultkualitas;
+              document.getElementById("result-kualitas-target").style.color =
+                "#000";
+              document.getElementById(
+                "result-kualitas-box"
+              ).style.backgroundColor = "#B7E5B4";
+              document
                 .getElementById("result-kualitas-gradient")
                 .classList.remove("icon-gradient-3");
               document
@@ -1217,13 +1284,25 @@
                 .classList.add("fa-laugh-squint");
             }
           } else {
-            if((poin1 == "1"||poin2 =="1"||poin3 =="1"||poin4 =="1"||poin5 =="1"||poin6 =="1")&& poin7 == "1"){
-              resultkualitas = "Akhirnyaaa, bobotnya 11 nih, walaupun belum sesuai standar bobot kualitas IKU. Tapi memang sudah ini yang terbaik, kita maksimalin di IKU yang ke kepala kantornya ya!"
-              document.getElementById("result-kualitas-target").innerText = resultkualitas;
-              document.getElementById("result-kualitas-target").style.color = "#000";
-              document.getElementById("result-kualitas-box").style.backgroundColor =
-                "#B7E5B4";
-                document
+            if (
+              (poin1 == "1" ||
+                poin2 == "1" ||
+                poin3 == "1" ||
+                poin4 == "1" ||
+                poin5 == "1" ||
+                poin6 == "1") &&
+              poin7 == "1"
+            ) {
+              resultkualitas =
+                "Akhirnyaaa, bobotnya 11 nih, walaupun belum sesuai standar bobot kualitas IKU. Tapi memang sudah ini yang terbaik, kita maksimalin di IKU yang ke kepala kantornya ya!";
+              document.getElementById("result-kualitas-target").innerText =
+                resultkualitas;
+              document.getElementById("result-kualitas-target").style.color =
+                "#000";
+              document.getElementById(
+                "result-kualitas-box"
+              ).style.backgroundColor = "#B7E5B4";
+              document
                 .getElementById("result-kualitas-gradient")
                 .classList.remove("icon-gradient-3");
               document
@@ -1235,12 +1314,24 @@
               document
                 .getElementById("result-kualitas-icon")
                 .classList.add("fa-laugh-squint");
-            } else if(poin1 == "1"&&poin2 =="1"&&poin3 =="1"&&poin4 =="1"&&poin5 =="1"&&poin6 =="1"&&poin7=="0"){
-              resultkualitas = "Bobotnya cuma 9 ajaaa, IKUnya kurang berkualitas :(. Jangan cuma ngukur output atau activity saja, coba ngukur kualitasnya juga";
-              document.getElementById("result-kualitas-target").innerText = resultkualitas;
-              document.getElementById("result-kualitas-target").style.color = "#fff";
-              document.getElementById("result-kualitas-box").style.backgroundColor =
-                "#F28585";
+            } else if (
+              poin1 == "1" &&
+              poin2 == "1" &&
+              poin3 == "1" &&
+              poin4 == "1" &&
+              poin5 == "1" &&
+              poin6 == "1" &&
+              poin7 == "0"
+            ) {
+              resultkualitas =
+                "Bobotnya cuma 9 ajaaa, IKUnya kurang berkualitas :(. Jangan cuma ngukur output atau activity saja, coba ngukur kualitasnya juga";
+              document.getElementById("result-kualitas-target").innerText =
+                resultkualitas;
+              document.getElementById("result-kualitas-target").style.color =
+                "#fff";
+              document.getElementById(
+                "result-kualitas-box"
+              ).style.backgroundColor = "#F28585";
               document
                 .getElementById("result-kualitas-gradient")
                 .classList.remove("icon-gradient-4");
@@ -1254,11 +1345,15 @@
                 .getElementById("result-kualitas-icon")
                 .classList.add("fa-sad-tear");
             } else {
-              resultkualitas = "Bobotnya 10 poin! Kalau untuk kamu yang 1 level dibawah kepala kantor, kualitas IKUnya sih masih kurang banget :(";
-              document.getElementById("result-kualitas-target").innerText = resultkualitas;
-              document.getElementById("result-kualitas-target").style.color = "#fff";
-              document.getElementById("result-kualitas-box").style.backgroundColor =
-                "#F28585";
+              resultkualitas =
+                "Bobotnya 10 poin! Kalau untuk kamu yang 1 level dibawah kepala kantor, kualitas IKUnya sih masih kurang banget :(";
+              document.getElementById("result-kualitas-target").innerText =
+                resultkualitas;
+              document.getElementById("result-kualitas-target").style.color =
+                "#fff";
+              document.getElementById(
+                "result-kualitas-box"
+              ).style.backgroundColor = "#F28585";
               document
                 .getElementById("result-kualitas-gradient")
                 .classList.remove("icon-gradient-4");
@@ -1277,16 +1372,21 @@
           const kualitasvaliditas = $("#kualitasvaliditas").val();
           const kualitaskendali = $("#kualitaskendali").val();
           // proxy high
-          if(kualitasvaliditas=="0"&&kualitaskendali=="0"){
-            if(eselon == "0"){
-              resultkualitas = "Hmm, bobotnya cuma 11 nih. Kalau ini IKU yang ke kepala kantor, harusnya bisa lebih baik lagi!"
+          if (kualitasvaliditas == "0" && kualitaskendali == "0") {
+            if (eselon == "0") {
+              resultkualitas =
+                "Hmm, bobotnya cuma 11 nih. Kalau ini IKU yang ke kepala kantor, harusnya bisa lebih baik lagi!";
             } else {
-              resultkualitas = "Standarnya sih emang 11, tapi kalau ini mendukung punya kepala kantor, harusnya yang lebih strategis lagi yaa!"
+              resultkualitas =
+                "Standarnya sih emang 11, tapi kalau ini mendukung punya kepala kantor, harusnya yang lebih strategis lagi yaa!";
             }
-            document.getElementById("result-kualitas-target").innerText = resultkualitas;
-            document.getElementById("result-kualitas-target").style.color = "#fff";
-            document.getElementById("result-kualitas-box").style.backgroundColor =
-              "#F28585";
+            document.getElementById("result-kualitas-target").innerText =
+              resultkualitas;
+            document.getElementById("result-kualitas-target").style.color =
+              "#fff";
+            document.getElementById(
+              "result-kualitas-box"
+            ).style.backgroundColor = "#F28585";
             document
               .getElementById("result-kualitas-gradient")
               .classList.remove("icon-gradient-4");
@@ -1299,17 +1399,22 @@
             document
               .getElementById("result-kualitas-icon")
               .classList.add("fa-sad-tear");
-          } else if(kualitasvaliditas=="0"&&kualitaskendali=="1"){
-            if(eselon == "0"){
-              resultkualitas = "Naah, bobotnya udah 14 nih! Rata-rata memang berada di angka ini. Yuk kita banyakin lagi ! Maksimal 40% dari total IKU kita loh yang bisa dapat angka diatas 11 (Maksimal nilai non cascading)"
+          } else if (kualitasvaliditas == "0" && kualitaskendali == "1") {
+            if (eselon == "0") {
+              resultkualitas =
+                "Naah, bobotnya udah 14 nih! Rata-rata memang berada di angka ini. Yuk kita banyakin lagi ! Maksimal 40% dari total IKU kita loh yang bisa dapat angka diatas 11 (Maksimal nilai non cascading)";
             } else {
-              resultkualitas = "Okeeeey, udah lumayan nih kita nambah yang 14, maka bisa lebih bagus lagi kualitasnya uhuuuy! Maksimal 20% dari total IKU kita loh yang bisa dapat angka diatas 11 (Maksimal nilai non cascading)"
+              resultkualitas =
+                "Okeeeey, udah lumayan nih kita nambah yang 14, maka bisa lebih bagus lagi kualitasnya uhuuuy! Maksimal 20% dari total IKU kita loh yang bisa dapat angka diatas 11 (Maksimal nilai non cascading)";
             }
-            document.getElementById("result-kualitas-target").innerText = resultkualitas;
-            document.getElementById("result-kualitas-target").style.color = "#000";
-            document.getElementById("result-kualitas-box").style.backgroundColor =
-              "#B7E5B4";
-              document
+            document.getElementById("result-kualitas-target").innerText =
+              resultkualitas;
+            document.getElementById("result-kualitas-target").style.color =
+              "#000";
+            document.getElementById(
+              "result-kualitas-box"
+            ).style.backgroundColor = "#B7E5B4";
+            document
               .getElementById("result-kualitas-gradient")
               .classList.remove("icon-gradient-3");
             document
@@ -1321,17 +1426,22 @@
             document
               .getElementById("result-kualitas-icon")
               .classList.add("fa-laugh-squint");
-          } else if(kualitasvaliditas=="0"&&kualitaskendali=="2"){
-            if(eselon == "0"){
-              resultkualitas = "Wooow, bobotnya 19 loh! Ini udah bisa jadi naik banget kualitasnya. Yuk kita banyakin lagi ! Maksimal 40% dari total IKU kita loh yang bisa dapat angka diatas 11 (Maksimal nilai non cascading)"
+          } else if (kualitasvaliditas == "0" && kualitaskendali == "2") {
+            if (eselon == "0") {
+              resultkualitas =
+                "Wooow, bobotnya 19 loh! Ini udah bisa jadi naik banget kualitasnya. Yuk kita banyakin lagi ! Maksimal 40% dari total IKU kita loh yang bisa dapat angka diatas 11 (Maksimal nilai non cascading)";
             } else {
-              resultkualitas = "Whoaaah, mantap banget dapat kualitas IKU 19! Maksimal 20% dari total IKU kita loh yang bisa dapat angka diatas 11 (Maksimal nilai non cascading)"
+              resultkualitas =
+                "Whoaaah, mantap banget dapat kualitas IKU 19! Maksimal 20% dari total IKU kita loh yang bisa dapat angka diatas 11 (Maksimal nilai non cascading)";
             }
-            document.getElementById("result-kualitas-target").innerText = resultkualitas;
-            document.getElementById("result-kualitas-target").style.color = "#000";
-            document.getElementById("result-kualitas-box").style.backgroundColor =
-              "#B7E5B4";
-              document
+            document.getElementById("result-kualitas-target").innerText =
+              resultkualitas;
+            document.getElementById("result-kualitas-target").style.color =
+              "#000";
+            document.getElementById(
+              "result-kualitas-box"
+            ).style.backgroundColor = "#B7E5B4";
+            document
               .getElementById("result-kualitas-gradient")
               .classList.remove("icon-gradient-3");
             document
@@ -1343,12 +1453,16 @@
             document
               .getElementById("result-kualitas-icon")
               .classList.add("fa-laugh-squint");
-          } else if(kualitasvaliditas=="1"&&kualitaskendali=="0"){
-            resultkualitas = "Waduh, kalau exact ini sih udah pasti ga ada yang full kendalinya di kitaaa, ini kamu salah rumus XD"
-            document.getElementById("result-kualitas-target").innerText = resultkualitas;
-            document.getElementById("result-kualitas-target").style.color = "#fff";
-            document.getElementById("result-kualitas-box").style.backgroundColor =
-              "#F28585";
+          } else if (kualitasvaliditas == "1" && kualitaskendali == "0") {
+            resultkualitas =
+              "Waduh, kalau exact ini sih udah pasti ga ada yang full kendalinya di kitaaa, ini kamu salah rumus XD";
+            document.getElementById("result-kualitas-target").innerText =
+              resultkualitas;
+            document.getElementById("result-kualitas-target").style.color =
+              "#fff";
+            document.getElementById(
+              "result-kualitas-box"
+            ).style.backgroundColor = "#F28585";
             document
               .getElementById("result-kualitas-gradient")
               .classList.remove("icon-gradient-4");
@@ -1361,17 +1475,22 @@
             document
               .getElementById("result-kualitas-icon")
               .classList.add("fa-sad-tear");
-          } else if(kualitasvaliditas=="1"&&kualitaskendali=="1"){
-            if(eselon == "0"){
-              resultkualitas = "Waaaw, ada SS yang jadi tanggung jawab kamu. Poinnya 21 loh ! Maksimal 40% dari total IKU kita loh yang bisa dapat angka diatas 11 (Maksimal nilai non cascading)"
+          } else if (kualitasvaliditas == "1" && kualitaskendali == "1") {
+            if (eselon == "0") {
+              resultkualitas =
+                "Waaaw, ada SS yang jadi tanggung jawab kamu. Poinnya 21 loh ! Maksimal 40% dari total IKU kita loh yang bisa dapat angka diatas 11 (Maksimal nilai non cascading)";
             } else {
-              resultkualitas = "Eh seriusan kamu dapat SS yang menjadi tanggung jawabmu? Pasti berat banget karena bobotnya 21! Maksimal 20% dari total IKU kita loh yang bisa dapat angka diatas 11 (Maksimal nilai non cascading)"
+              resultkualitas =
+                "Eh seriusan kamu dapat SS yang menjadi tanggung jawabmu? Pasti berat banget karena bobotnya 21! Maksimal 20% dari total IKU kita loh yang bisa dapat angka diatas 11 (Maksimal nilai non cascading)";
             }
-            document.getElementById("result-kualitas-target").innerText = resultkualitas;
-            document.getElementById("result-kualitas-target").style.color = "#000";
-            document.getElementById("result-kualitas-box").style.backgroundColor =
-              "#B7E5B4";
-              document
+            document.getElementById("result-kualitas-target").innerText =
+              resultkualitas;
+            document.getElementById("result-kualitas-target").style.color =
+              "#000";
+            document.getElementById(
+              "result-kualitas-box"
+            ).style.backgroundColor = "#B7E5B4";
+            document
               .getElementById("result-kualitas-gradient")
               .classList.remove("icon-gradient-3");
             document
@@ -1383,17 +1502,22 @@
             document
               .getElementById("result-kualitas-icon")
               .classList.add("fa-laugh-squint");
-          } else if(kualitasvaliditas=="1"&&kualitaskendali=="2"){
-            if(eselon == "0"){
-              resultkualitas = "Wih, Semoga SSnya bisa tercapai ya dengan seluruh usahamu! Bobotnya maksimal di 26 poin ! Maksimal 40% dari total IKU kita loh yang bisa dapat angka diatas 11 (Maksimal nilai non cascading)"
+          } else if (kualitasvaliditas == "1" && kualitaskendali == "2") {
+            if (eselon == "0") {
+              resultkualitas =
+                "Wih, Semoga SSnya bisa tercapai ya dengan seluruh usahamu! Bobotnya maksimal di 26 poin ! Maksimal 40% dari total IKU kita loh yang bisa dapat angka diatas 11 (Maksimal nilai non cascading)";
             } else {
-              resultkualitas = "Wowowoww benerankah kamu dapat SS yang menjadi tanggung jawabmu? Ngeri to the max, karena bobotnya 26 poin!  Maksimal 20% dari total IKU kita loh yang bisa dapat angka diatas 11 (Maksimal nilai non cascading)"
+              resultkualitas =
+                "Wowowoww benerankah kamu dapat SS yang menjadi tanggung jawabmu? Ngeri to the max, karena bobotnya 26 poin!  Maksimal 20% dari total IKU kita loh yang bisa dapat angka diatas 11 (Maksimal nilai non cascading)";
             }
-            document.getElementById("result-kualitas-target").innerText = resultkualitas;
-            document.getElementById("result-kualitas-target").style.color = "#000";
-            document.getElementById("result-kualitas-box").style.backgroundColor =
-              "#B7E5B4";
-              document
+            document.getElementById("result-kualitas-target").innerText =
+              resultkualitas;
+            document.getElementById("result-kualitas-target").style.color =
+              "#000";
+            document.getElementById(
+              "result-kualitas-box"
+            ).style.backgroundColor = "#B7E5B4";
+            document
               .getElementById("result-kualitas-gradient")
               .classList.remove("icon-gradient-3");
             document
@@ -1406,25 +1530,111 @@
               .getElementById("result-kualitas-icon")
               .classList.add("fa-laugh-squint");
           } else {
-
           }
         }
       }
       document.getElementById("result-kualitas-view").style.display = "block";
-      document.getElementById("result-kualitas-view").scrollIntoView({ behavior: "smooth" });
+      document
+        .getElementById("result-kualitas-view")
+        .scrollIntoView({ behavior: "smooth" });
     });
   }
-  
-  function scrollToSection(){
-    $("#myTab li a").on("click", function (event){
-      event.preventDefault();
-      let element = document.getElementById('myTabContent');
-      element.scrollIntoView({behavior:"smooth"});
+
+  function removeObject(index,totalIku) {
+    totalIku.splice(index, 1);
+    addObject(totalIku);
+    cekTotalIKU(totalIku);
+  }
+
+  function addObject(totalIku){
+    const objectList = document.getElementById("objectList");
+    objectList.innerHTML = "";
+    totalIku.forEach((obj, index) => {
+      const listItem = document.createElement("li");
+      listItem.classList.add("wow", "fadeInUp");
+      listItem.setAttribute("data-wow-delay", "0.2s");
+      const spanElement = document.createElement("span");
+      spanElement.classList.add("list-inner");
+      spanElement.style.width = "100%";
+      spanElement.textContent = `ID: ${obj.id}, Bobot Kualitas: ${obj.bobotKualitas}, Bobot Target: ${obj.bobotTarget}`;
+      listItem.appendChild(spanElement);
+      objectList.appendChild(listItem);
+      const deleteButton = document.createElement("button");
+      deleteButton.classList.add("template-btn", "primary-bg-3");
+      const iconElement = document.createElement("i");
+      iconElement.classList.add("fas", "fa-trash");
+      deleteButton.appendChild(iconElement);
+      deleteButton.onclick = () => removeObject(index,totalIku);
+      listItem.appendChild(deleteButton);
+    });
+    cekTotalIKU(totalIku);
+  }
+
+  function hitungK3() {
+    let totalIku = [];
+    $("#simpaniku").on("click", function (e) {
+      e.preventDefault();
+      let iku = {
+        id: null,
+        bobotKualitas: null,
+        bobotTarget: null,
+      };
+      $("#search-modal").modal("hide");
+      iku.id = totalIku.length + 1;
+      iku.bobotKualitas = $("#bobotkualitask3").val();
+      iku.bobotTarget = $("#bobotkualitastargetk3").val();
+      totalIku.push(iku);
+      addObject(totalIku);
+    });
+    cekTotalIKU(totalIku);
+  }
+
+  function cekTotalIKU(totalIku){
+    const listIku = totalIku;
+    $("#cekKKK").on("click",function(e){
+      e.preventDefault();
+      const k3Tab = document.getElementById('k3-tab');
+      const activeTab = k3Tab.querySelector('a.active');
+      let standarKualitas = 10;
+      if (activeTab) {
+        const activeHref = activeTab.getAttribute('href');
+        if(activeHref=="#pelaksana"){
+          standarKualitas = 10
+        } else if(activeHref=="#fungsional"){
+          standarKualitas = 11
+        } else if(activeHref=="#2level"){
+          standarKualitas = 11
+        } else {
+          standarKualitas = 12
+        }
+      } 
+      if(totalIku.length >= 3){
+        const standarTarget = 3;
+        const totalBobotKualitas = listIku.reduce((acc, obj) => acc + parseInt(obj.bobotKualitas), 0);
+        const averageBobotKualitas = totalBobotKualitas / listIku.length;
+        const nilaiKualitasIKU = averageBobotKualitas / standarKualitas;
+        const totalBobotTarget = listIku.reduce((acc, obj) => acc + parseInt(obj.bobotTarget), 0);
+        const averageBobotTarget = totalBobotTarget / listIku.length;
+        const nilaiTargetIKU = averageBobotTarget / standarTarget;
+        const nilaiK3 = parseFloat((60/100 * nilaiKualitasIKU) + (40/100*nilaiTargetIKU)).toFixed(2);
+        document.getElementById("k3-view").style.display = "flex";
+        document.getElementById("hasilNilaiK3").innerText = nilaiK3;
+      } else {
+        alert("Minimal IKU Pelaksana 3");
+      }
     })
-    $("#target-tab li a").on("click", function(){
+  }
+
+  function scrollToSection() {
+    $("#myTab li a").on("click", function (event) {
+      event.preventDefault();
+      let element = document.getElementById("myTabContent");
+      element.scrollIntoView({ behavior: "smooth" });
+    });
+    $("#target-tab li a").on("click", function () {
       $("#result-view").hide();
       $("#result-baru-view").hide();
-    })
+    });
   }
 
   // 22. Price range Fliter jQuery UI
@@ -1469,6 +1679,7 @@
     portfolioFilter();
     checkTarget();
     scrollToSection();
+    hitungK3();
   });
 
   /*---------------------

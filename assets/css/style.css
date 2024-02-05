@@ -6219,7 +6219,7 @@ textarea {
   margin-bottom: 15px;
 }
 
-.fancy-check-list-v2 li:nth-child(1),
+/* .fancy-check-list-v2 li:nth-child(1),
 .fancy-check-list-v2 li:nth-child(4) {
   margin-left: 15px;
 }
@@ -6227,7 +6227,7 @@ textarea {
 .fancy-check-list-v2 li:nth-child(2),
 .fancy-check-list-v2 li:nth-child(5) {
   margin-left: 30px;
-}
+} */
 
 .fancy-check-list-v2.color-heading-3 li {
   color: var(--color-heading-3);
@@ -7660,7 +7660,7 @@ textarea {
 
 .pricing-table-three.style-three:hover,
 .pricing-table-three.style-three.featured-plan {
-  background: #fd695a;
+  background: #3377ff;
 }
 
 .pricing-table-three.style-three:hover .price,
@@ -9578,9 +9578,9 @@ textarea {
 }
 
 /*======= Service Tab  =======*/
-.service-tab .service-tab-nav {
+/* .service-tab .service-tab-nav {
   margin-bottom: 80px;
-}
+} */
 
 .service-tab .service-tab-nav .nav-tabs {
   display: -webkit-box;

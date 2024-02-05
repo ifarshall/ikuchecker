@@ -70,11 +70,11 @@
                                 <i class="far fa-bullseye-arrow"></i> Proyeksi Bobot Kualitas Target IKU
                             </a>
                         </li>
-                        <!-- <li class="nav-item" role="presentation">
+                        <li class="nav-item" role="presentation">
                             <a class="nav-link" data-toggle="tab" href="#tabItem4" role="tab">
                                 <i class="far fa-coins"></i> Proyeksi KKK
                             </a>
-                        </li> -->
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -566,13 +566,106 @@
                     </div>
                     <div class="tab-pane fade" id="tabItem4" role="tabpanel">
                         <div class="service-tab-ime text-center">
-                            <img src="assets/img/service-tab-img.jpg" alt="Image">
+                            <div class="row align-items-center justify-content-center">
+                                <div class="col-lg-8 align-content-center align-items-center">
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-8">
+                                            <div class="common-heading tagline-boxed m-b-20 text-center">
+                                                <span class="tagline">Bagaimana hitungnya?</span>
+                                                <h2 class="title">Pastikan kamu sudah hitung dulu bobot kualitas IKU dan bobot kualitas target IKUnya yaa!</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="m-b-20">
+                                        <a href="#" data-toggle="modal" data-target="#search-modal" class="template-btn secondary-bg">
+                                            <i class="fas fa-plus"></i>&nbsp;Tambah IKU
+                                        </a>&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a href="#" id="cekKKK" class="template-btn primary-bg-6">
+                                            <i class="fas fa-calculator"></i>&nbsp;Cek KKK
+                                        </a>
+                                    </div>
+                                    <hr>
+                                    <ul id="k3-tab" class="nav nav-tabs product-information-tab">
+                                        <li role="presentation">
+                                            <a class="active" data-toggle="tab" href="#pelaksana" role="tab" style="font-size: 10px;">
+                                                Pelaksana
+                                            </a>
+                                        </li>
+                                        <li role="presentation">
+                                            <a data-toggle="tab" href="#fungsional" role="tab" style="font-size: 10px;">
+                                                Fungsional Non Manajerial
+                                            </a>
+                                        </li>
+                                        <li role="presentation">
+                                            <a data-toggle="tab" href="#2level" role="tab" style="font-size: 10px;">
+                                                2 Level dibawah Kepala Kantor
+                                            </a>
+                                        </li>
+                                        <li role="presentation">
+                                            <a data-toggle="tab" href="#1level" role="tab" style="font-size: 10px;">
+                                                1 Level dibawah Kepala Kantor </a>
+                                        </li>
+                                    </ul>
+                                    <hr>
+                                    <ul class="fancy-check-list-v2 m-b-20" id="objectList">
+                                    </ul>
+                                    <div id="k3-view" style="display: none;" class="row fancy-icon-boxes-v1">
+                                        <div class="col-md-12 wow fadeInUp text-center" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                                            <div class="fancy-icon-box m-b-30">
+                                                <div class="box-icon">
+                                                    <i class="flaticon-goal-1"></i>
+                                                </div>
+                                                <div class="box-content" style="width: 100%;">
+                                                    <h4 class="title">Hasil K3</h4>
+                                                    <h2 class="title" id="hasilNilaiK3"></h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <div class="modal fade search-area" id="search-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <form>
+                    <div class="pricing-table-three style-three featured-plan m-t-30 wow fadeInUp" data-wow-delay="0.4s">
+                        <h6 class="plan-name">Bobot Kualitas IKU</h6>
+                        <div class="price">
+                            <select id="bobotkualitask3">
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="14">14</option>
+                                <option value="19">19</option>
+                                <option value="21">21</option>
+                                <option value="26">26</option>
+                            </select>
+                        </div>
+                        <h6 class="plan-name">Bobot Kualitas Target IKU</h6>
+                        <div class="price">
+                            <select id="bobotkualitastargetk3">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                        <a href="#" id="simpaniku" class="pricing-btn">Simpan <i class="fas fa-save"></i></a>
+                        <span class="plan-tag">IKU</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <!--====== Start Scroll To Top ======-->
     <a href="#" class="back-to-top" id="scroll-top">
