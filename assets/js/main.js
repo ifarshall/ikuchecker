@@ -1623,7 +1623,8 @@
       } else {
         let ikuMin = 3;
         activeHref ==  "#pelaksana" ? ikuMin = 3 : 5;
-        alert("Minimal IKI sebanyak "+ikuMin + "IKI dan maksimal sebanyak 10 IKI");
+        document.getElementById("k3-view").style.display = "flex";
+        document.getElementById("hasilNilaiK3").innerText = "Minimal IKI sebanyak "+ikuMin + " IKI dan maksimal sebanyak 10 IKI";
       }
     })
   }
