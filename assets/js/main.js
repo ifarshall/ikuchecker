@@ -1622,7 +1622,9 @@
         document.getElementById("hasilNilaiK3").innerText = nilaiK3;
       } else {
         let ikuMin = 3;
-        activeHref ==  "#pelaksana" ? ikuMin = 3 : 5;
+        if(activeHref!=="#pelaksana"&&activeHref!=="#fungsional"){
+          ikuMin = 5;
+        }
         document.getElementById("k3-view").style.display = "flex";
         document.getElementById("hasilNilaiK3").innerText = "Minimal IKI sebanyak "+ikuMin + " IKI dan maksimal sebanyak 10 IKI";
       }
