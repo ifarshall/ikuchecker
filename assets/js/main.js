@@ -907,7 +907,6 @@
     });
     $("#cascadingbaru").change(function () {
       if ($(this).val() == "1") {
-        console.log("masuk?");
         $("#barupoin1").css("display", "none");
         $("#barupoin2").css("display", "none");
         $("#validitasbaru").css("display", "flex");
@@ -1563,6 +1562,7 @@
       deleteButton.classList.add("template-btn", "primary-bg-3");
       const iconElement = document.createElement("i");
       iconElement.classList.add("fas", "fa-trash");
+      iconElement.style.marginLeft = 0;
       deleteButton.appendChild(iconElement);
       deleteButton.onclick = () => removeObject(index,totalIku);
       listItem.appendChild(deleteButton);
