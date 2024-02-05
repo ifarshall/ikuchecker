@@ -1596,8 +1596,9 @@
       const k3Tab = document.getElementById('k3-tab');
       const activeTab = k3Tab.querySelector('a.active');
       let standarKualitas = 10;
+      let activeHref;
       if (activeTab) {
-        const activeHref = activeTab.getAttribute('href');
+        activeHref = activeTab.getAttribute('href');
         if(activeHref=="#pelaksana"){
           standarKualitas = 10
         } else if(activeHref=="#fungsional"){
