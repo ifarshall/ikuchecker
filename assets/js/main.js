@@ -699,6 +699,7 @@
     let bobot3;
     let bobot4;
     let bobot5;
+    // cek target maximize
     $("#check-target").on("click", function (event) {
       event.preventDefault();
       const target2 = parseFloat($("#target-2").val());
@@ -788,10 +789,10 @@
     $("#check-target-minimize").on("click", function (event) {
       event.preventDefault();
       const target2 = parseFloat($("#target-min-2").val());
-      const realisasi2 = parseFloat($("#realisasi-min-2").val());
+      let realisasi2 = parseFloat($("#realisasi-min-2").val());
       const indexCapaian2 = (1+(1 - realisasi2 / target2));
       const target1 = parseFloat($("#target-min-1").val());
-      const realisasi1 = parseFloat($("#realisasi-min-1").val());
+      let realisasi1 = parseFloat($("#realisasi-min-1").val());
       const indexCapaian1 = (1+(1 - realisasi1 / target1));
       let indeks125 = false;
       if (indexCapaian2 >= 1.25 && indexCapaian1 >= 1.25) {
@@ -817,21 +818,41 @@
       document.getElementById("result-bobot4").innerText = bobot4;
       document.getElementById("result-bobot5").innerText = bobot5;
       if (indeks125) {
-        document.getElementById("menantang").innerText =
-          "Tidaaak, mending reformulasi aja";
-        document.getElementById("menantang").style.color = "#fff";
-        document.getElementById("menantang-box").style.backgroundColor =
-          "#F28585";
-        document
-          .getElementById("menantang-gradient")
-          .classList.remove("icon-gradient-5");
-        document
-          .getElementById("menantang-icon")
-          .classList.remove("fa-laugh-squint");
-        document
-          .getElementById("menantang-gradient")
-          .classList.add("icon-gradient-3");
-        document.getElementById("menantang-icon").classList.add("fa-sad-tear");
+        if(realisasi1==0||realisasi2==0){
+          document.getElementById("menantang").innerText =
+            "Mungkin ini masih menantang, realisasi 0 jadi sudah maksimal. Kalau dihitung pasti lebih dari 125 indeks capaiannya. Kalau mau 120 bisa realisasi diisi 0.08";
+          document.getElementById("menantang").style.color = "#fff";
+          document.getElementById("menantang-box").style.backgroundColor =
+            "#F28585";
+          document
+            .getElementById("menantang-gradient")
+            .classList.remove("icon-gradient-5");
+          document
+            .getElementById("menantang-icon")
+            .classList.remove("fa-laugh-squint");
+          document
+            .getElementById("menantang-gradient")
+            .classList.add("icon-gradient-3");
+          document
+            .getElementById("menantang-icon")
+            .classList.add("fa-sad-tear");
+        } else {
+          document.getElementById("menantang").innerText =
+            "Tidaaak, mending reformulasi aja";
+          document.getElementById("menantang").style.color = "#fff";
+          document.getElementById("menantang-box").style.backgroundColor =
+            "#F28585";
+          document
+            .getElementById("menantang-gradient")
+            .classList.remove("icon-gradient-5");
+          document
+            .getElementById("menantang-icon")
+            .classList.remove("fa-laugh-squint");
+          document
+            .getElementById("menantang-gradient")
+            .classList.add("icon-gradient-3");
+          document.getElementById("menantang-icon").classList.add("fa-sad-tear");
+        }
       } else {
         if (realisasi2 == target2 && realisasi1 == target1) {
           document.getElementById("menantang").innerText =
