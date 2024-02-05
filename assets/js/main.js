@@ -1144,12 +1144,12 @@
             .getElementById("result-kualitas-icon")
             .classList.add("fa-laugh-squint");
         } else if (
-          poin1 == "1" &&
-          poin2 == "1" &&
-          poin3 == "1" &&
-          poin4 == "1" &&
-          poin5 == "1" &&
-          poin6 == "1" &&
+          poin1 == "0" &&
+          poin2 == "0" &&
+          poin3 == "0" &&
+          poin4 == "0" &&
+          poin5 == "0" &&
+          poin6 == "0" &&
           poin7 == "0"
         ) {
           resultkualitas =
@@ -1609,7 +1609,7 @@
           standarKualitas = 12
         }
       } 
-      if(((activeHref=="#pelaksana"&&totalIku.length >= 3)||(activeHref!=="#pelaksana"&&totalIku.length >= 5))&&totalIku.length<11){
+      if((((activeHref=="#pelaksana"||activeHref=="#fungsional")&&totalIku.length >= 3)||((activeHref!=="#pelaksana"&&activeHref!=="#fungsional")&&totalIku.length >= 5))&&totalIku.length<11){
         const standarTarget = 3;
         const totalBobotKualitas = listIku.reduce((acc, obj) => acc + parseInt(obj.bobotKualitas), 0);
         const averageBobotKualitas = totalBobotKualitas / listIku.length;
