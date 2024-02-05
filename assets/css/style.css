@@ -2436,8 +2436,8 @@ textarea {
 .template-btn.secondary-bg:not(:hover) {
   background-color: var(--color-secondary);
   border-color: var(--color-secondary);
-  -webkit-box-shadow: 0px 10px 30px 0px rgba(244, 115, 42, 0.36);
-  box-shadow: 0px 10px 30px 0px rgba(244, 115, 42, 0.36);
+  -webkit-box-shadow: 0px 10px 30px 0px rgba(59, 114, 255, 0.36);
+  box-shadow: 0px 10px 30px 0px rgba(59, 114, 255, 0.36);
 }
 
 .template-btn.secondary-bg:hover {
