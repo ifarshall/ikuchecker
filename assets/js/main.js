@@ -1608,7 +1608,7 @@
           standarKualitas = 12
         }
       } 
-      if(totalIku.length >= 3){
+      if(((activeHref=="#pelaksana"&&totalIku.length >= 3)||(activeHref!=="#pelaksana"&&totalIku.length >= 5))&&totalIku.length<11){
         const standarTarget = 3;
         const totalBobotKualitas = listIku.reduce((acc, obj) => acc + parseInt(obj.bobotKualitas), 0);
         const averageBobotKualitas = totalBobotKualitas / listIku.length;
@@ -1620,7 +1620,9 @@
         document.getElementById("k3-view").style.display = "flex";
         document.getElementById("hasilNilaiK3").innerText = nilaiK3;
       } else {
-        alert("Minimal IKU Pelaksana 3");
+        let ikuMin = 3;
+        activeHref ==  "#pelaksana" ? ikuMin = 3 : 5;
+        alert("Minimal IKI sebanyak "+ikuMin + "IKI dan maksimal sebanyak 10 IKI");
       }
     })
   }
