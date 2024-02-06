@@ -709,7 +709,7 @@
       const realisasi1 = parseFloat($("#realisasi-1").val());
       const indexCapaian1 = realisasi1 / target1;
       let indeks125 = false;
-      if (indexCapaian2 >= 1.25 && indexCapaian1 >= 1.25) {
+      if (indexCapaian2 > 1.25 && indexCapaian1 > 1.25) {
         bobot1 = parseFloat((0.94 * realisasi1).toFixed(2));
         bobot2 = parseFloat((0.95 * realisasi1).toFixed(2));
         bobot3 = parseFloat(realisasi1.toFixed(2));
@@ -797,7 +797,7 @@
       let realisasi1 = parseFloat($("#realisasi-min-1").val());
       const indexCapaian1 = 1 + (1 - realisasi1 / target1);
       let indeks125 = false;
-      if (indexCapaian2 >= 1.25 && indexCapaian1 >= 1.25) {
+      if (indexCapaian2 > 1.25 && indexCapaian1 > 1.25) {
         bobot1 = parseFloat((1.1 * realisasi1).toFixed(3));
         bobot2 = parseFloat((1.09 * realisasi1).toFixed(3));
         bobot3 = parseFloat(realisasi1.toFixed(3));
