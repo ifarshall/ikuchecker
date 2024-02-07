@@ -188,6 +188,7 @@ body {
   font-size: 17px;
   line-height: 1.8;
   overflow-x: hidden !important;
+  background-color: #f7f7f7;
 }
 
 * {
@@ -9628,7 +9629,7 @@ textarea {
 .service-tab-section {
   position: relative;
   z-index: 1;
-  background-color: #f7f7f7;
+  /* background-color: #f7f7f7; */
 }
 
 .service-tab-section::before {

@@ -1372,7 +1372,7 @@
           const kualitaskendali = $("#kualitaskendali").val();
           // proxy high
           if (kualitasvaliditas == "0" && kualitaskendali == "0") {
-            if (eselon == "0"||eselon=="2") {
+            if (eselon == "0" || eselon == "2") {
               resultkualitas =
                 "Hmm, bobotnya cuma 11 nih. Kalau ini IKU yang ke kepala kantor, harusnya bisa lebih baik lagi!";
             } else {
@@ -1399,7 +1399,7 @@
               .getElementById("result-kualitas-icon")
               .classList.add("fa-sad-tear");
           } else if (kualitasvaliditas == "0" && kualitaskendali == "1") {
-            if (eselon == "0"||eselon=="2") {
+            if (eselon == "0" || eselon == "2") {
               resultkualitas =
                 "Naah, bobotnya udah 14 nih! Rata-rata memang berada di angka ini. Yuk kita banyakin lagi ! Maksimal 40% dari total IKU kita loh yang bisa dapat angka diatas 11 (Maksimal nilai non cascading)";
             } else {
@@ -1426,7 +1426,7 @@
               .getElementById("result-kualitas-icon")
               .classList.add("fa-laugh-squint");
           } else if (kualitasvaliditas == "0" && kualitaskendali == "2") {
-            if (eselon == "0"||eselon=="2") {
+            if (eselon == "0" || eselon == "2") {
               resultkualitas =
                 "Wooow, bobotnya 19 loh! Ini udah bisa jadi naik banget kualitasnya. Yuk kita banyakin lagi ! Maksimal 40% dari total IKU kita loh yang bisa dapat angka diatas 11 (Maksimal nilai non cascading)";
             } else {
@@ -1475,7 +1475,7 @@
               .getElementById("result-kualitas-icon")
               .classList.add("fa-sad-tear");
           } else if (kualitasvaliditas == "1" && kualitaskendali == "1") {
-            if (eselon == "0"||eselon=="2") {
+            if (eselon == "0" || eselon == "2") {
               resultkualitas =
                 "Waaaw, ada SS yang jadi tanggung jawab kamu. Poinnya 21 loh ! Maksimal 40% dari total IKU kita loh yang bisa dapat angka diatas 11 (Maksimal nilai non cascading)";
             } else {
@@ -1502,7 +1502,7 @@
               .getElementById("result-kualitas-icon")
               .classList.add("fa-laugh-squint");
           } else if (kualitasvaliditas == "1" && kualitaskendali == "2") {
-            if (eselon == "0"||eselon=="2") {
+            if (eselon == "0" || eselon == "2") {
               resultkualitas =
                 "Wih, Semoga SSnya bisa tercapai ya dengan seluruh usahamu! Bobotnya maksimal di 26 poin ! Maksimal 40% dari total IKU kita loh yang bisa dapat angka diatas 11 (Maksimal nilai non cascading)";
             } else {
@@ -1538,13 +1538,13 @@
     });
   }
 
-  function removeObject(index,totalIku) {
+  function removeObject(index, totalIku) {
     totalIku.splice(index, 1);
     addObject(totalIku);
     cekTotalIKU(totalIku);
   }
 
-  function addObject(totalIku){
+  function addObject(totalIku) {
     const objectList = document.getElementById("objectList");
     objectList.innerHTML = "";
     totalIku.forEach((obj, index) => {
@@ -1563,9 +1563,11 @@
       iconElement.classList.add("fas", "fa-trash");
       iconElement.style.marginLeft = 0;
       deleteButton.appendChild(iconElement);
-      deleteButton.onclick = () => removeObject(index,totalIku);
+      deleteButton.onclick = () => removeObject(index, totalIku);
       listItem.appendChild(deleteButton);
-      document.getElementById("objectList").scrollIntoView({ behavior: "smooth" });
+      document
+        .getElementById("objectList")
+        .scrollIntoView({ behavior: "smooth" });
     });
     cekTotalIKU(totalIku);
   }
@@ -1589,76 +1591,112 @@
     cekTotalIKU(totalIku);
   }
 
-  function cekTotalIKU(totalIku){
+  function refreshTips() {
+    const listTips = [
+      "Pelaksana memiliki standar kualitas 10 poin!",
+      "Pejabat Fungsional dan pejabat 2 level dibawah kepala kantor memiliki standar kualitas 11 poin!",
+      "Pejabat 1 level dibawah kepala kantor memiliki standar kualitas 12 poin!",
+      "Seluruh pegawai maupun pejabat memiliki standar target 3 poin!",
+      "Kalau memang ada pegawai yang kurang berkinerja tapi hasil predikatnya Sangat Baik, itu karena KKKnya bagus!",
+      "Kalau kamu dapat baik meskipun capaian kamu 120 semua, artinya komitmen kinerja kamu ga berkualitas! Yuk diubah!",
+      "Meskipun capaian kita maksimal 120 semua, tapi kalau KKKnya dibawah 1 maka hasilnya ga maksimal juga! Makanya predikat kamu Baik atau Butuh Perbaikan",
+    ];
+    const randomIndex = Math.floor(Math.random() * listTips.length);
+    document.getElementById("tips").innerText = listTips[randomIndex];
+  }
+
+  function cekTotalIKU(totalIku) {
     const listIku = totalIku;
-    $("#cekKKK").on("click",function(e){
+    $("#cekKKK").on("click", function (e) {
       e.preventDefault();
-      const k3Tab = document.getElementById('k3-tab');
-      const activeTab = k3Tab.querySelector('a.active');
+      const k3Tab = document.getElementById("k3-tab");
+      const activeTab = k3Tab.querySelector("a.active");
       let standarKualitas = 10;
       let activeHref;
       let limit;
-      console.log('list iku',listIku);
+      console.log("list iku", listIku);
       if (activeTab) {
-        activeHref = activeTab.getAttribute('href');
-        if(activeHref=="#pelaksana"){
+        activeHref = activeTab.getAttribute("href");
+        if (activeHref == "#pelaksana") {
           standarKualitas = 10;
           limit = 0;
-        } else if(activeHref=="#fungsional"){
+        } else if (activeHref == "#fungsional") {
           standarKualitas = 11;
           limit = Math.floor(0.2 * listIku.length);
-        } else if(activeHref=="#2level"){
+        } else if (activeHref == "#2level") {
           standarKualitas = 11;
           limit = Math.floor(0.2 * listIku.length);
         } else {
           standarKualitas = 12;
           limit = Math.floor(0.4 * listIku.length);
         }
-      } 
-      if((((activeHref=="#pelaksana"||activeHref=="#fungsional")&&totalIku.length >= 3)||((activeHref!=="#pelaksana"&&activeHref!=="#fungsional")&&totalIku.length >= 5))&&totalIku.length<11){
+      }
+      if (
+        (((activeHref == "#pelaksana" || activeHref == "#fungsional") &&
+          totalIku.length >= 3) ||
+          (activeHref !== "#pelaksana" &&
+            activeHref !== "#fungsional" &&
+            totalIku.length >= 5)) &&
+        totalIku.length < 11
+      ) {
         const standarTarget = 3;
         let totalBobotKualitas = 0;
         let jumlahObjekLebihDariLimit = 0;
         listIku.forEach((obj, index) => {
-            console.log('index',index);
-            console.log('limit',limit);
-            const bobot = index >= limit && parseInt(obj.bobotKualitas) > 11 ? 11 : parseInt(obj.bobotKualitas);
-            console.log('bobot',bobot);
-            totalBobotKualitas += bobot;
-            if (parseInt(obj.bobotKualitas) > 11 && index >= limit) {
-                jumlahObjekLebihDariLimit++;
-            }
+          console.log("index", index);
+          console.log("limit", limit);
+          const bobot =
+            index >= limit && parseInt(obj.bobotKualitas) > 11
+              ? 11
+              : parseInt(obj.bobotKualitas);
+          console.log("bobot", bobot);
+          totalBobotKualitas += bobot;
+          if (parseInt(obj.bobotKualitas) > 11 && index >= limit) {
+            jumlahObjekLebihDariLimit++;
+          }
         });
-        if(jumlahObjekLebihDariLimit>0){
-          document.getElementById("notesK3").innerText = jumlahObjekLebihDariLimit + " IKU melebihi batasan CP yang memiliki bobot lebih dari 11.\n Pelaksana 0% dari total IKU dihitung CP, Fungsional dan Pejabat 2 level di bawah pemilik Peta 20%, dan Pejabat 1 level di bawah pemilik Peta 40%"
+        if (jumlahObjekLebihDariLimit > 0) {
+          document.getElementById("notesK3").innerText =
+            jumlahObjekLebihDariLimit +
+            " IKU melebihi batasan CP yang memiliki bobot lebih dari 11.\n Pelaksana 0% dari total IKU dihitung CP, Fungsional dan Pejabat 2 level di bawah pemilik Peta 20%, dan Pejabat 1 level di bawah pemilik Peta 40%";
         }
         const averageBobotKualitas = totalBobotKualitas / listIku.length;
         const nilaiKualitasIKU = averageBobotKualitas / standarKualitas;
-        const totalBobotTarget = listIku.reduce((acc, obj) => acc + parseInt(obj.bobotTarget), 0);
+        const totalBobotTarget = listIku.reduce(
+          (acc, obj) => acc + parseInt(obj.bobotTarget),
+          0
+        );
         const averageBobotTarget = totalBobotTarget / listIku.length;
         const nilaiTargetIKU = averageBobotTarget / standarTarget;
-        const nilaiK3 = parseFloat((60/100 * nilaiKualitasIKU) + (40/100*nilaiTargetIKU)).toFixed(2);
+        const nilaiK3 = parseFloat(
+          (60 / 100) * nilaiKualitasIKU + (40 / 100) * nilaiTargetIKU
+        ).toFixed(2);
         document.getElementById("k3-view").style.display = "flex";
         document.getElementById("hasilNilaiK3").innerText = nilaiK3;
         document
-        .getElementById("k3-view")
-        .scrollIntoView({ behavior: "smooth" });
+          .getElementById("k3-view")
+          .scrollIntoView({ behavior: "smooth" });
       } else {
         let ikuMin = 3;
-        if(activeHref!=="#pelaksana"&&activeHref!=="#fungsional"){
+        if (activeHref !== "#pelaksana" && activeHref !== "#fungsional") {
           ikuMin = 5;
         }
         document.getElementById("k3-view").style.display = "flex";
-        document.getElementById("hasilNilaiK3").innerText = "Minimal IKI sebanyak "+ikuMin + " IKI dan maksimal sebanyak 10 IKI";
-        document.getElementById("k3-view").scrollIntoView({ behavior: "smooth" });
-        
+        document.getElementById("hasilNilaiK3").innerText =
+          "Minimal IKI sebanyak " +
+          ikuMin +
+          " IKI dan maksimal sebanyak 10 IKI";
+        document
+          .getElementById("k3-view")
+          .scrollIntoView({ behavior: "smooth" });
       }
-    })
+    });
   }
 
   function scrollToSection() {
     $("#myTab li a").on("click", function (event) {
       event.preventDefault();
+      refreshTips();
       let element = document.getElementById("myTabContent");
       element.scrollIntoView({ behavior: "smooth" });
     });
@@ -1711,6 +1749,7 @@
     checkTarget();
     scrollToSection();
     hitungK3();
+    refreshTips();
   });
 
   /*---------------------
