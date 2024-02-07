@@ -1597,6 +1597,8 @@
       "Pejabat Fungsional dan pejabat 2 level dibawah kepala kantor memiliki standar kualitas 11 poin!",
       "Pejabat 1 level dibawah kepala kantor memiliki standar kualitas 12 poin!",
       "Seluruh pegawai maupun pejabat memiliki standar target 3 poin!",
+      "Sebagus-bagusnya design kinerja Pelaksana, maksimal kualitasnya ya 11 poin aja :D",
+      "Seburuk-buruknya design kinerja Pelaksana, kualitasnya ya 9 poin",
       "Kalau memang ada pegawai yang kurang berkinerja tapi hasil predikatnya Sangat Baik, itu karena KKKnya bagus!",
       "Kalau kamu dapat baik meskipun capaian kamu 120 semua, artinya komitmen kinerja kamu ga berkualitas! Yuk diubah!",
       "Meskipun capaian kita maksimal 120 semua, tapi kalau KKKnya dibawah 1 maka hasilnya ga maksimal juga! Makanya predikat kamu Baik atau Butuh Perbaikan",
