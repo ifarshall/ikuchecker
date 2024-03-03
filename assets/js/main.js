@@ -1601,7 +1601,7 @@
       "Seburuk-buruknya design kinerja Pelaksana, kualitasnya ya 9 poin",
       "Kalau memang ada pegawai yang kurang berkinerja tapi hasil predikatnya Sangat Baik, itu karena KKKnya bagus!",
       "Kalau kamu dapat baik meskipun capaian kamu 120 semua, artinya komitmen kinerja kamu ga berkualitas! Yuk diubah!",
-      "Meskipun capaian kita maksimal 120 semua, tapi kalau KKKnya dibawah 1 maka hasilnya ga maksimal juga! Makanya predikat kamu Baik atau Butuh Perbaikan",
+      "Meskipun capaian kita maksimal 120 semua, tapi kalau koefisien KKKnya dibawah 1 maka hasilnya ga maksimal juga! Makanya predikat kamu Baik atau Butuh Perbaikan",
     ];
     const randomIndex = Math.floor(Math.random() * listTips.length);
     document.getElementById("tips").innerText = listTips[randomIndex];
